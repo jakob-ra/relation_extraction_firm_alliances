@@ -1,0 +1,1963 @@
+
+    {
+        "document":"Indra (ID) and Aeropuertos Espanoles Y Navegacion Aerea (AEA) formed a strategic alliance to provide installation services in Spain. The worth of the alliance was US$ 24.1 bil (4.5 bil Spain peseta).",
+        "tokens":[
+            {
+                "text":"Indra",
+                "start":0,
+                "end":5,
+                "token_start":0,
+                "token_end":1,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"Aeropuertos Espanoles Y",
+                "start":15,
+                "end":38,
+                "token_start":5,
+                "token_end":8,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":5,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":5,
+                "head":0,
+                "relationLabel":"StrategicAlliance"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 1074734045"
+        }
+    }
+
+    {
+        "document":"PowerBand Solutions Inc and Zoom Blockchain Solutions Inc planned to form a strategic alliance.",
+        "tokens":[
+            {
+                "text":"PowerBand Solutions Inc",
+                "start":0,
+                "end":23,
+                "token_start":0,
+                "token_end":3,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"Zoom Blockchain Solutions Inc",
+                "start":28,
+                "end":57,
+                "token_start":4,
+                "token_end":8,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":4,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":4,
+                "head":0,
+                "relationLabel":"StrategicAlliance"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 3351892045.0"
+        }
+    }
+
+    {
+        "document":"Hovione FarmaCiencia SA (Hovione) and Ligand Pharmaceuticals Inc (Ligand) formed a strategic alliance under which Captisol(R), a patent-protected, chemically modified cyclodextrin with a structure designed to optimize the solubility and stability of drugs, will be made available to Hoviones customers. Hovione will utilize the Captisol technology in its solubilization programs, which include amorphous solid dispersions, crystal design and size reduction and control of particle size to increase the probability of solving the molecule's bioavailability challenges.",
+        "tokens":[
+            {
+                "text":"Hovione FarmaCiencia SA",
+                "start":0,
+                "end":23,
+                "token_start":0,
+                "token_end":3,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"Ligand Pharmaceuticals Inc",
+                "start":38,
+                "end":64,
+                "token_start":7,
+                "token_end":10,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":7,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":7,
+                "head":0,
+                "relationLabel":"StrategicAlliance"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 2532673045"
+        }
+    }
+
+    {
+        "document":"Fever 104 HT Media Ltd (Fever 104), a subsidiary of HT Media Ltd, and 94.3 MY FM (94.3 FM), a subsidiary of DB Corp Ltd, formed a strategic alliance to sell the radio brands in India. The alliance expands the participants' markets through the sales, integrated solutions and activations. The alliance offers the brands to advertisers in Indian metro and non-metro markets in which Fever 104 and 94.3 FM are not present.",
+        "tokens":[
+            {
+                "text":"Fever 104 HT Media Ltd",
+                "start":0,
+                "end":22,
+                "token_start":0,
+                "token_end":5,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"94.3 MY FM",
+                "start":70,
+                "end":80,
+                "token_start":18,
+                "token_end":21,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":18,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":18,
+                "head":0,
+                "relationLabel":"StrategicAlliance"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 2511235045"
+        }
+    }
+
+    {
+        "document":"Tacit Knowledge Inc and Amplience Inc formed a strategic alliance, to integrate Tacit Knowledge's technology into the ncommerce platform in US.",
+        "tokens":[
+            {
+                "text":"Tacit Knowledge Inc",
+                "start":0,
+                "end":19,
+                "token_start":0,
+                "token_end":3,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"Amplience Inc",
+                "start":24,
+                "end":37,
+                "token_start":4,
+                "token_end":6,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":4,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":4,
+                "head":0,
+                "relationLabel":"StrategicAlliance"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 3092023045.0"
+        }
+    }
+
+    {
+        "document":"Redfish Labs Inc and Everwise Corp formed a strategic alliance.The purpose of strategic alliance was to expand tools for employees merging technology, human coaching, social learning and mentorship for individual employees.",
+        "tokens":[
+            {
+                "text":"Redfish Labs Inc",
+                "start":0,
+                "end":16,
+                "token_start":0,
+                "token_end":3,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"Everwise Corp",
+                "start":21,
+                "end":34,
+                "token_start":4,
+                "token_end":6,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":4,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":4,
+                "head":0,
+                "relationLabel":"StrategicAlliance"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 3532060045"
+        }
+    }
+
+    {
+        "document":"Agora Inc and KENT CamEye formed a strategic alliance to power live streaming car security in India.",
+        "tokens":[
+            {
+                "text":"Agora Inc",
+                "start":0,
+                "end":9,
+                "token_start":0,
+                "token_end":2,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"KENT CamEye",
+                "start":14,
+                "end":25,
+                "token_start":3,
+                "token_end":5,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":3,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":3,
+                "head":0,
+                "relationLabel":"StrategicAlliance"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 3396776045.0"
+        }
+    }
+
+    {
+        "document":"Air Products & Chemicals Inc and Sea-Land Chemical Co formed a strategic alliance to wholesale and distribute chemical products branded as Tomadol, linear alcohol ethoxylate surfactants, and Tomamine, an ether amine and amine derivative additives in the United States. The products being commercialized were to be used by the household, institutional and industrial cleaning and metalworking fluids industries located in Washington, DC, Delaware, Maryland, New Jersey, Pennsylvania and New York.",
+        "tokens":[
+            {
+                "text":"Air Products & Chemicals Inc",
+                "start":0,
+                "end":28,
+                "token_start":0,
+                "token_end":5,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"Sea-Land Chemical Co",
+                "start":33,
+                "end":53,
+                "token_start":6,
+                "token_end":11,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":6,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":6,
+                "head":0,
+                "relationLabel":"StrategicAlliance"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 1953350045"
+        }
+    }
+
+    {
+        "document":"Sampo Corp (SC) and Cap Gemini NV (CG), a unit of Cap Gemini SA, formed a joint venture named Capsam Consulting OY (CC) to provide information technology services in Finland. CC was to supply IT systems development and maintenance services to SC and was to also work closely with SC's business operations and IT units. SC held a 40% stake while CG held the remaining 60% interest in CC.",
+        "tokens":[
+            {
+                "text":"Sampo Corp",
+                "start":0,
+                "end":10,
+                "token_start":0,
+                "token_end":2,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"Cap Gemini NV",
+                "start":20,
+                "end":33,
+                "token_start":6,
+                "token_end":9,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":6,
+                "relationLabel":"JointVenture"
+            },
+            {
+                "child":6,
+                "head":0,
+                "relationLabel":"JointVenture"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 1017460045"
+        }
+    }
+
+    {
+        "document":"Akcea Therapeutics Inc and Ionis Pharmaceuticals Inc formed a strategic alliance.",
+        "tokens":[
+            {
+                "text":"Akcea Therapeutics Inc",
+                "start":0,
+                "end":22,
+                "token_start":0,
+                "token_end":3,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"Ionis Pharmaceuticals Inc",
+                "start":27,
+                "end":52,
+                "token_start":4,
+                "token_end":7,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":4,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":4,
+                "head":0,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":0,
+                "head":4,
+                "relationLabel":"Licensing"
+            },
+            {
+                "child":4,
+                "head":0,
+                "relationLabel":"Licensing"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 3320955045.0"
+        }
+    }
+
+    {
+        "document":"Sony Computer Entertainment America Inc, a unit of Sony Corp, and Eat Sleep Play Inc formed a strategic alliance to develop entertainment game software in the United States. The alliance was a strategic investment opportunity both for the partners to leverage their real time game content development and computer entertainment system services and to further expand their market and product coverage worldwide.",
+        "tokens":[
+            {
+                "text":"Sony Computer Entertainment",
+                "start":0,
+                "end":27,
+                "token_start":0,
+                "token_end":3,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"Eat Sleep Play Inc",
+                "start":66,
+                "end":84,
+                "token_start":13,
+                "token_end":17,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":13,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":13,
+                "head":0,
+                "relationLabel":"StrategicAlliance"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 1892861045"
+        }
+    }
+
+    {
+        "document":"PacificNet Games Ltd, a unit of PacificNet Inc, and Spin3, a unit of Spiral Solutions Ltd formed a strategic alliance to provide integrated interactive and wireless gaming application solutions and services globally. The alliance was expected to deliver a mobile, web, and station based gaming, technology which contains OnCash patent-pending cash and distribution chain management system, as well as online games including slots, video poker, RNG table games, and live dealer games.",
+        "tokens":[
+            {
+                "text":"PacificNet Games Ltd",
+                "start":0,
+                "end":20,
+                "token_start":0,
+                "token_end":3,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"Spin3",
+                "start":52,
+                "end":57,
+                "token_start":11,
+                "token_end":12,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":11,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":11,
+                "head":0,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":0,
+                "head":11,
+                "relationLabel":"TechnologyTransfer"
+            },
+            {
+                "child":11,
+                "head":0,
+                "relationLabel":"TechnologyTransfer"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 1950396045"
+        }
+    }
+
+    {
+        "document":"FEI Co and JKTech Pty Ltd formed a strategic alliance to develop automated analysis software for minerals exploration and processing globally. The newly develop technology was expected to provide innovative applications, which enhance the minerals processing and improves the evaluation process of exploration targets for mining operations. The alliance was a strategic opportunity both for the partners to leverage their automated software development services and to further expand their market and product coverage in the mining industry.",
+        "tokens":[
+            {
+                "text":"FEI Co",
+                "start":0,
+                "end":6,
+                "token_start":0,
+                "token_end":2,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"JKTech Pty Ltd",
+                "start":11,
+                "end":25,
+                "token_start":3,
+                "token_end":6,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":3,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":3,
+                "head":0,
+                "relationLabel":"StrategicAlliance"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 1853077045"
+        }
+    }
+
+    {
+        "document":"Exxon Chemical Co (ECC), a unit of Exxon Corp, and MW Kellogg Co (KC), a unit of Halliburton Co, formed a strategic alliance to license the integration of both companies' ethylene technologies in the United States. KC was to market and sell the ethylene process from the combination.  The agreement gave KC worldwide license to use ECC's technical ethylene information in developing the combined process.",
+        "tokens":[
+            {
+                "text":"Exxon Chemical Co",
+                "start":0,
+                "end":17,
+                "token_start":0,
+                "token_end":3,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"MW Kellogg Co",
+                "start":51,
+                "end":64,
+                "token_start":14,
+                "token_end":17,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":14,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":14,
+                "head":0,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":0,
+                "head":14,
+                "relationLabel":"Marketing"
+            },
+            {
+                "child":14,
+                "head":0,
+                "relationLabel":"Marketing"
+            },
+            {
+                "child":0,
+                "head":14,
+                "relationLabel":"Licensing"
+            },
+            {
+                "child":14,
+                "head":0,
+                "relationLabel":"Licensing"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 1041645045"
+        }
+    }
+
+    {
+        "document":"Mail Boxes Etc (MBE), a unit of US Office Products Co, granted FamilyMart Co Ltd, a unit of Seiyu Ltd, a license to own and operate MBE office-services chain in Japan.",
+        "tokens":[
+            {
+                "text":"Mail Boxes Etc",
+                "start":0,
+                "end":14,
+                "token_start":0,
+                "token_end":3,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"FamilyMart Co Ltd",
+                "start":63,
+                "end":80,
+                "token_start":16,
+                "token_end":19,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":16,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":16,
+                "head":0,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":0,
+                "head":16,
+                "relationLabel":"Licensing"
+            },
+            {
+                "child":16,
+                "head":0,
+                "relationLabel":"Licensing"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 972503045"
+        }
+    }
+
+    {
+        "document":"SmartCool Systems Inc and Wates Group Ltd formed a strategic alliance, to enable both to deliver much needed and significant energy reduction programmes",
+        "tokens":[
+            {
+                "text":"SmartCool Systems Inc",
+                "start":0,
+                "end":21,
+                "token_start":0,
+                "token_end":3,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"Wates Group Ltd",
+                "start":26,
+                "end":41,
+                "token_start":4,
+                "token_end":7,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":4,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":4,
+                "head":0,
+                "relationLabel":"StrategicAlliance"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 3109869045.0"
+        }
+    }
+
+    {
+        "document":"Hoechst AG (HA) and Roberts Pharmaceutical Corp (RPC) formed a strategic alliance in which HA granted RPC a license to market Pentasa, a drug for the treatment of ulcerative colitis, in the United States. The licensing fee was $130 mil US (235 mil Deutsche marks). Pentasa was expected to generate $40 mil US(72 mil marks) from sales.",
+        "tokens":[
+            {
+                "text":"Hoechst AG",
+                "start":0,
+                "end":10,
+                "token_start":0,
+                "token_end":2,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"Roberts Pharmaceutical Corp",
+                "start":20,
+                "end":47,
+                "token_start":6,
+                "token_end":9,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":6,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":6,
+                "head":0,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":0,
+                "head":6,
+                "relationLabel":"Marketing"
+            },
+            {
+                "child":6,
+                "head":0,
+                "relationLabel":"Marketing"
+            },
+            {
+                "child":0,
+                "head":6,
+                "relationLabel":"Licensing"
+            },
+            {
+                "child":6,
+                "head":0,
+                "relationLabel":"Licensing"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 857634045"
+        }
+    }
+
+    {
+        "document":"Sembcorp Development Ltd and CRE Asia Pte Ltd formed a joint venture named Sembcorp Infra Hldg. The JV was expected to have revenues of USD 0.1 million. The purpose of joint venture was to facilitate the expansion of Sembcorp's warehousing properties in Vietnam.",
+        "tokens":[
+            {
+                "text":"Sembcorp Development Ltd",
+                "start":0,
+                "end":24,
+                "token_start":0,
+                "token_end":3,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"CRE Asia Pte Ltd",
+                "start":29,
+                "end":45,
+                "token_start":4,
+                "token_end":8,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":4,
+                "relationLabel":"JointVenture"
+            },
+            {
+                "child":4,
+                "head":0,
+                "relationLabel":"JointVenture"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 3598288045"
+        }
+    }
+
+    {
+        "document":"AMLI Residential Properties Trust a unit of Amili Residental Properties, and Northwestern Mutual Life Insurance Co formed a joint venture to develop an apartment community in Georgia. Construction was expected to be completed by third quarter of 1999.",
+        "tokens":[
+            {
+                "text":"AMLI Residential Properties",
+                "start":0,
+                "end":27,
+                "token_start":0,
+                "token_end":3,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"Northwestern Mutual",
+                "start":77,
+                "end":96,
+                "token_start":12,
+                "token_end":14,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":12,
+                "relationLabel":"JointVenture"
+            },
+            {
+                "child":12,
+                "head":0,
+                "relationLabel":"JointVenture"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 699782045"
+        }
+    }
+
+    {
+        "document":"Wyndham Capital Mortgage Inc and Ai Foundry formed a strategic alliance to leverage the cognitive robot's mortgage expertise to accelerate its loan origination process.",
+        "tokens":[
+            {
+                "text":"Wyndham Capital Mortgage Inc",
+                "start":0,
+                "end":28,
+                "token_start":0,
+                "token_end":4,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"Ai Foundry",
+                "start":33,
+                "end":43,
+                "token_start":5,
+                "token_end":7,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":5,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":5,
+                "head":0,
+                "relationLabel":"StrategicAlliance"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 3574535045"
+        }
+    }
+
+    {
+        "document":"Kroll Factual Data Inc, a unit of Kroll Inc, and Mortgage Industry Advisory Corp, formed a strategic alliance to provide integrated loan collateral risk assessment application solutions and services in the United States. the partners were expected to provide resident screening, collection information services and business information services that assesses consumer data for clients to evaluate loan characteristics and transfer risk.",
+        "tokens":[
+            {
+                "text":"Kroll Factual Data Inc",
+                "start":0,
+                "end":22,
+                "token_start":0,
+                "token_end":4,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"Mortgage Industry Advisory",
+                "start":49,
+                "end":75,
+                "token_start":12,
+                "token_end":15,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":12,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":12,
+                "head":0,
+                "relationLabel":"StrategicAlliance"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 2055736045"
+        }
+    }
+
+    {
+        "document":"Crucell NV (CN) and Centocor Inc (CI), a unit of Johnson & Johnson, formed a strategic alliance wherein CN licensed CI to use CN's PER.C6(TM) human cell line for the production of monoclonal antibodies. CN was expected to have an option for a non-exclusive, worldwide commercial product license to manufacture one or more specified monoclonal antibody products using the PER.C6(TM) cell line. Under the terms of agreement, CN was expected to receive an upfront payment, annual maintenance fees and royalties on future sales of any products manufactured using the PER.C6(TM) cell line. Terms were not disclosed.",
+        "tokens":[
+            {
+                "text":"Crucell NV",
+                "start":0,
+                "end":10,
+                "token_start":0,
+                "token_end":2,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"Centocor Inc",
+                "start":20,
+                "end":32,
+                "token_start":6,
+                "token_end":8,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":6,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":6,
+                "head":0,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":0,
+                "head":6,
+                "relationLabel":"ResearchandDevelopment"
+            },
+            {
+                "child":6,
+                "head":0,
+                "relationLabel":"ResearchandDevelopment"
+            },
+            {
+                "child":0,
+                "head":6,
+                "relationLabel":"Licensing"
+            },
+            {
+                "child":6,
+                "head":0,
+                "relationLabel":"Licensing"
+            },
+            {
+                "child":0,
+                "head":6,
+                "relationLabel":"TechnologyTransfer"
+            },
+            {
+                "child":6,
+                "head":0,
+                "relationLabel":"TechnologyTransfer"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 1467285045"
+        }
+    }
+
+    {
+        "document":"Veritasadvantage Inc and Colorado Hospital Association formed a strategic alliance to electronically connect hospitals and ambulatory surgery centers to the Veritas database of over $17.5 billion worth of hospital purchase order records.",
+        "tokens":[
+            {
+                "text":"Veritasadvantage Inc",
+                "start":0,
+                "end":20,
+                "token_start":0,
+                "token_end":2,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"Colorado Hospital Association",
+                "start":25,
+                "end":54,
+                "token_start":3,
+                "token_end":6,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":3,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":3,
+                "head":0,
+                "relationLabel":"StrategicAlliance"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 3442877045.0"
+        }
+    }
+
+    {
+        "document":"AcSys Biometrics Corp, a joint venture between And Corp and Siedle North America, a unit of SSS Siedle formed a strategic alliance to provide markeitng services for AB's Face Recognition System in Canada.",
+        "tokens":[
+            {
+                "text":"AcSys Biometrics Corp",
+                "start":0,
+                "end":21,
+                "token_start":0,
+                "token_end":3,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"Siedle North America",
+                "start":60,
+                "end":80,
+                "token_start":11,
+                "token_end":14,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":11,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":11,
+                "head":0,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":0,
+                "head":11,
+                "relationLabel":"Marketing"
+            },
+            {
+                "child":11,
+                "head":0,
+                "relationLabel":"Marketing"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 1262093045"
+        }
+    }
+
+    {
+        "document":"SoftBrands Inc and Libra Hospitality Inc formed a strategic alliance to wholesale and distribute enterprise application software globally. The alliance was expected to leverage their hospitality technology platform in Russia and Eastern Europe.",
+        "tokens":[
+            {
+                "text":"SoftBrands Inc",
+                "start":0,
+                "end":14,
+                "token_start":0,
+                "token_end":2,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"Libra Hospitality Inc",
+                "start":19,
+                "end":40,
+                "token_start":3,
+                "token_end":6,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":3,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":3,
+                "head":0,
+                "relationLabel":"StrategicAlliance"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 1922010045"
+        }
+    }
+
+    {
+        "document":"Ocean Sky International Ltd (OSI), Sing Lun Holdings Ltd (SLH) and Pacific Garment Manufacturing Pte Ltd (PGM) formed a joint evnture named SPO International Pte Ltd (SPO) to manufacture, wholesale and supply specialty apparel in Singapore. OSI, SLH and PGM were each to hold a 33.33% stake in SPO.",
+        "tokens":[
+            {
+                "text":"Ocean Sky International Ltd",
+                "start":0,
+                "end":27,
+                "token_start":0,
+                "token_end":4,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"Sing Lun Holdings Ltd",
+                "start":35,
+                "end":56,
+                "token_start":8,
+                "token_end":12,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"Pacific Garment Manufacturing",
+                "start":67,
+                "end":96,
+                "token_start":16,
+                "token_end":19,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":8,
+                "relationLabel":"JointVenture"
+            },
+            {
+                "child":0,
+                "head":16,
+                "relationLabel":"JointVenture"
+            },
+            {
+                "child":8,
+                "head":0,
+                "relationLabel":"JointVenture"
+            },
+            {
+                "child":8,
+                "head":16,
+                "relationLabel":"JointVenture"
+            },
+            {
+                "child":16,
+                "head":0,
+                "relationLabel":"JointVenture"
+            },
+            {
+                "child":16,
+                "head":8,
+                "relationLabel":"JointVenture"
+            },
+            {
+                "child":0,
+                "head":8,
+                "relationLabel":"Manufacturing"
+            },
+            {
+                "child":0,
+                "head":16,
+                "relationLabel":"Manufacturing"
+            },
+            {
+                "child":8,
+                "head":0,
+                "relationLabel":"Manufacturing"
+            },
+            {
+                "child":8,
+                "head":16,
+                "relationLabel":"Manufacturing"
+            },
+            {
+                "child":16,
+                "head":0,
+                "relationLabel":"Manufacturing"
+            },
+            {
+                "child":16,
+                "head":8,
+                "relationLabel":"Manufacturing"
+            },
+            {
+                "child":0,
+                "head":8,
+                "relationLabel":"Supply"
+            },
+            {
+                "child":0,
+                "head":16,
+                "relationLabel":"Supply"
+            },
+            {
+                "child":8,
+                "head":0,
+                "relationLabel":"Supply"
+            },
+            {
+                "child":8,
+                "head":16,
+                "relationLabel":"Supply"
+            },
+            {
+                "child":16,
+                "head":0,
+                "relationLabel":"Supply"
+            },
+            {
+                "child":16,
+                "head":8,
+                "relationLabel":"Supply"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 1422750045"
+        }
+    }
+
+    {
+        "document":"Splitit Payments Ltd and Mastercard Inc formed a strategic alliance. The purpose of strategic alliance was to accelerate the adoption of Splitits installment solution around the world.",
+        "tokens":[
+            {
+                "text":"Splitit Payments Ltd",
+                "start":0,
+                "end":20,
+                "token_start":0,
+                "token_end":3,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"Mastercard Inc",
+                "start":25,
+                "end":39,
+                "token_start":4,
+                "token_end":6,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":4,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":4,
+                "head":0,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":0,
+                "head":4,
+                "relationLabel":"ResearchandDevelopment"
+            },
+            {
+                "child":4,
+                "head":0,
+                "relationLabel":"ResearchandDevelopment"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 3590880045"
+        }
+    }
+
+    {
+        "document":"Infineon Technologies AG and Klika Tech Inc formed a strategic alliance to develop innovative solutions for smart buildings based on Infineons semiconductor portfolio and Klika Tech integrations of IoT Cloud and Amazon Web Services (AWS).",
+        "tokens":[
+            {
+                "text":"Infineon Technologies AG",
+                "start":0,
+                "end":24,
+                "token_start":0,
+                "token_end":3,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"Klika Tech Inc",
+                "start":29,
+                "end":43,
+                "token_start":4,
+                "token_end":7,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":4,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":4,
+                "head":0,
+                "relationLabel":"StrategicAlliance"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 3478861045.0"
+        }
+    }
+
+    {
+        "document":"Qatargas Operating Co Ltd and Shell Oil Co formed a strategic alliance. The purpsoe was to the Sale and Purchase Agreement (SPA) with Shell to deliver 1 million tons per annum of LNG to the State of Kuwait, commencing this year.",
+        "tokens":[
+            {
+                "text":"Qatargas Operating Co Ltd",
+                "start":0,
+                "end":25,
+                "token_start":0,
+                "token_end":4,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"Shell Oil Co",
+                "start":30,
+                "end":42,
+                "token_start":5,
+                "token_end":8,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":5,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":5,
+                "head":0,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":0,
+                "head":5,
+                "relationLabel":"Supply"
+            },
+            {
+                "child":5,
+                "head":0,
+                "relationLabel":"Supply"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 3513087045"
+        }
+    }
+
+    {
+        "document":"McCann Enterprise (MC) and SG Blocks Inc (SB) formed a strategic alliance to jointly implement a sales, product design, and brand enhancement platform for current and prospective clients of both entities. The companies will work together to develop and market individually tailored building solutions including but not limited to mobile and temporary retail construction, permanent store construction, event related structures, and product showcasing.",
+        "tokens":[
+            {
+                "text":"McCann Enterprise",
+                "start":0,
+                "end":17,
+                "token_start":0,
+                "token_end":2,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"SG Blocks Inc",
+                "start":27,
+                "end":40,
+                "token_start":6,
+                "token_end":9,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":6,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":6,
+                "head":0,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":0,
+                "head":6,
+                "relationLabel":"ResearchandDevelopment"
+            },
+            {
+                "child":6,
+                "head":0,
+                "relationLabel":"ResearchandDevelopment"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 2431115045"
+        }
+    }
+
+    {
+        "document":"Sony Corp (SC) and NEC Corp formed a strategic alliance to provide development services of an MPEG decorder LSI chip for use in digital televisions in Japan. SC was to launch digital TVs and set-top boxes later 2000 with using the MPEG decorder LSI.",
+        "tokens":[
+            {
+                "text":"Sony Corp",
+                "start":0,
+                "end":9,
+                "token_start":0,
+                "token_end":2,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"NEC Corp",
+                "start":19,
+                "end":27,
+                "token_start":6,
+                "token_end":8,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":6,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":6,
+                "head":0,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":0,
+                "head":6,
+                "relationLabel":"ResearchandDevelopment"
+            },
+            {
+                "child":6,
+                "head":0,
+                "relationLabel":"ResearchandDevelopment"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 1037463045"
+        }
+    }
+
+    {
+        "document":"Shift4 Corp and Concept Software Systems formed a strategic alliance to provide integrated point-of-sale and membership system transaction processing application solutions and services of credit, debit and gift card globally. The secure payment gateway would remove useable card holder data from the system at the point of sale, with an Assured Delivery Technology (ADT) guarantees that all transactions were authorized and settled with no lost or duplicate transactions.",
+        "tokens":[
+            {
+                "text":"Shift4 Corp",
+                "start":0,
+                "end":11,
+                "token_start":0,
+                "token_end":2,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"Concept Software Systems",
+                "start":16,
+                "end":40,
+                "token_start":3,
+                "token_end":6,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":3,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":3,
+                "head":0,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":0,
+                "head":3,
+                "relationLabel":"TechnologyTransfer"
+            },
+            {
+                "child":3,
+                "head":0,
+                "relationLabel":"TechnologyTransfer"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 1888897045"
+        }
+    }
+
+    {
+        "document":"Scale Computing Inc and Copaco NV formed a strategic alliance to be reselling Scale's innovative HC3 product on Lenovo servers in the Netherlands.",
+        "tokens":[
+            {
+                "text":"Scale Computing Inc",
+                "start":0,
+                "end":19,
+                "token_start":0,
+                "token_end":3,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"Copaco NV",
+                "start":24,
+                "end":33,
+                "token_start":4,
+                "token_end":6,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":4,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":4,
+                "head":0,
+                "relationLabel":"StrategicAlliance"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 3210653045.0"
+        }
+    }
+
+    {
+        "document":"Minera Alamos Inc and Osisko Gold Royalties Ltd formed a strategic alliance, to expand operations in Mexico, Central and South America",
+        "tokens":[
+            {
+                "text":"Minera Alamos Inc",
+                "start":0,
+                "end":17,
+                "token_start":0,
+                "token_end":3,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"Osisko Gold Royalties Ltd",
+                "start":22,
+                "end":47,
+                "token_start":4,
+                "token_end":8,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":4,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":4,
+                "head":0,
+                "relationLabel":"StrategicAlliance"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 3125690045.0"
+        }
+    }
+
+    {
+        "document":"Gladiator Resources Ltd (GR) and Independence Group NL (IG) formed a strategic alliance to provide nickel mining services in East Kambalda-Lake in Australia.",
+        "tokens":[
+            {
+                "text":"Gladiator Resources Ltd",
+                "start":0,
+                "end":23,
+                "token_start":0,
+                "token_end":3,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"Independence Group NL",
+                "start":33,
+                "end":54,
+                "token_start":7,
+                "token_end":10,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":7,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":7,
+                "head":0,
+                "relationLabel":"StrategicAlliance"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 1832120045"
+        }
+    }
+
+    {
+        "document":"AP Green Industries Inc, a unit of USG Corp, acquired an undisclosed majority interest in Lanxide Corp's Lanxide ThermoComposites Inc {LTI} for an undisclosed amount. The joint venture was expected to focus on commercializing refractory products for the steel industry utilizing ceramic composites technology licensed from Lanxide Corp. Under a separate agreement, Lanxide Corp granted AP Green a license to develop and market refractory products using advanced materials technology for certain non-steel refractories applications. The companies stated that AP Green would have worldwide rights, excluding Japan, for certain refractories products using Lanxide's technology. Financial details were not disclosed.",
+        "tokens":[
+            {
+                "text":"AP Green Industries Inc",
+                "start":0,
+                "end":23,
+                "token_start":0,
+                "token_end":4,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"Lanxide Corp",
+                "start":90,
+                "end":102,
+                "token_start":17,
+                "token_end":19,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"Lanxide Corp",
+                "start":365,
+                "end":377,
+                "token_start":59,
+                "token_end":61,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":17,
+                "relationLabel":"JointVenture"
+            },
+            {
+                "child":17,
+                "head":0,
+                "relationLabel":"JointVenture"
+            },
+            {
+                "child":0,
+                "head":17,
+                "relationLabel":"Manufacturing"
+            },
+            {
+                "child":17,
+                "head":0,
+                "relationLabel":"Manufacturing"
+            },
+            {
+                "child":0,
+                "head":17,
+                "relationLabel":"Licensing"
+            },
+            {
+                "child":17,
+                "head":0,
+                "relationLabel":"Licensing"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 491393045"
+        }
+    }
+
+    {
+        "document":"Animal Clinical Investigation LLC and Ethos Veterinary Health formed a strategic alliance, to deliver market approval of pharmaceuticals and therapeutics in Animal Health.",
+        "tokens":[
+            {
+                "text":"Animal Clinical Investigation",
+                "start":0,
+                "end":29,
+                "token_start":0,
+                "token_end":3,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"Ethos Veterinary Health",
+                "start":38,
+                "end":61,
+                "token_start":5,
+                "token_end":8,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":5,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":5,
+                "head":0,
+                "relationLabel":"StrategicAlliance"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 3084027045.0"
+        }
+    }
+
+    {
+        "document":"Wiztec Solutions Ltd and Pele-Phone Communications Ltd formed a joint venture to provide customer care and billing solutions to cellular telephony operators and service providers. Under the terms of the agreement, Wiztec was to incorporate its Wizard System for Pay TV operators with Pele-Phone's billing system software for cellular operators. Financial details were not disclosed.",
+        "tokens":[
+            {
+                "text":"Wiztec Solutions Ltd",
+                "start":0,
+                "end":20,
+                "token_start":0,
+                "token_end":3,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"Pele-Phone Communications Ltd",
+                "start":25,
+                "end":54,
+                "token_start":4,
+                "token_end":9,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":4,
+                "relationLabel":"JointVenture"
+            },
+            {
+                "child":4,
+                "head":0,
+                "relationLabel":"JointVenture"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 667027045"
+        }
+    }
+
+    {
+        "document":"Celera Genomics Corp (CG), a unit of Applera Corp, and Medarex Inc (MI) formed a strategic alliance to provide research and development services in the United States. The alliance was expected to discover and develop fully human antibodies for the potential treatment of multiple cancer indications. Under terms of the agreement, CG was to select targets from its portfolio of novel cancer targets and MI was expected to generate fully human monoclonal antibodies against the targets usings its UltiMab Human Antibody Development System (R). Financial terms were not disclosed.",
+        "tokens":[
+            {
+                "text":"Celera Genomics Corp",
+                "start":0,
+                "end":20,
+                "token_start":0,
+                "token_end":3,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"Medarex Inc",
+                "start":55,
+                "end":66,
+                "token_start":14,
+                "token_end":16,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":14,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":14,
+                "head":0,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":0,
+                "head":14,
+                "relationLabel":"ResearchandDevelopment"
+            },
+            {
+                "child":14,
+                "head":0,
+                "relationLabel":"ResearchandDevelopment"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 1770733045"
+        }
+    }
+
+    {
+        "document":"Aimmune Therapeutics Inc and Michael Foods Inc formed a strategic alliance to supply its egg products worldwide.",
+        "tokens":[
+            {
+                "text":"Aimmune Therapeutics Inc",
+                "start":0,
+                "end":24,
+                "token_start":0,
+                "token_end":3,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"Michael Foods Inc",
+                "start":29,
+                "end":46,
+                "token_start":4,
+                "token_end":7,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":4,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":4,
+                "head":0,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":0,
+                "head":4,
+                "relationLabel":"Supply"
+            },
+            {
+                "child":4,
+                "head":0,
+                "relationLabel":"Supply"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 3331740045.0"
+        }
+    }
+
+    {
+        "document":"Cynvenio Biosystems Inc and Milenia Labs formed a strategic alliance to ClearID Breast Cancer Testing.",
+        "tokens":[
+            {
+                "text":"Cynvenio Biosystems Inc",
+                "start":0,
+                "end":23,
+                "token_start":0,
+                "token_end":3,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"Milenia Labs",
+                "start":28,
+                "end":40,
+                "token_start":4,
+                "token_end":6,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":4,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":4,
+                "head":0,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":0,
+                "head":4,
+                "relationLabel":"Supply"
+            },
+            {
+                "child":4,
+                "head":0,
+                "relationLabel":"Supply"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 3064797045.0"
+        }
+    }
+
+    {
+        "document":"Hunan Hongyun Steel Mould Technology Co Ltd and Hangxiao Steel Structure Co Ltd formed a strategic alliance was to provide property development services in China.",
+        "tokens":[
+            {
+                "text":"Hunan Hongyun Steel Mould",
+                "start":0,
+                "end":25,
+                "token_start":0,
+                "token_end":4,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"Hangxiao Steel Structure Co",
+                "start":48,
+                "end":75,
+                "token_start":8,
+                "token_end":12,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":8,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":8,
+                "head":0,
+                "relationLabel":"StrategicAlliance"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 3202794045.0"
+        }
+    }
+
+    {
+        "document":"Handleman Co and VCI Distribution Ltd agreed to form and operate a joint venture to manufacture and market Handleman's personal computer software products in the UK. Under the terms of the agreement both concerns would equally divide the ownership of the new company. The agreement stated that Handleman's Softprime Inc and Softsource Inc would initially supply the products to the joint venture. The agreement also stated that Handleman scheduled the market release of fifteen Handleman titles called the Premier Collection.\" Specific terms of the agreement were not disclosed.S",
+        "tokens":[
+            {
+                "text":"Handleman Co",
+                "start":0,
+                "end":12,
+                "token_start":0,
+                "token_end":2,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"VCI Distribution Ltd",
+                "start":17,
+                "end":37,
+                "token_start":3,
+                "token_end":6,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":3,
+                "relationLabel":"JointVenture"
+            },
+            {
+                "child":3,
+                "head":0,
+                "relationLabel":"JointVenture"
+            },
+            {
+                "child":0,
+                "head":3,
+                "relationLabel":"Marketing"
+            },
+            {
+                "child":3,
+                "head":0,
+                "relationLabel":"Marketing"
+            },
+            {
+                "child":0,
+                "head":3,
+                "relationLabel":"Manufacturing"
+            },
+            {
+                "child":3,
+                "head":0,
+                "relationLabel":"Manufacturing"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 409446045"
+        }
+    }
+
+    {
+        "document":"Brand Networks LLC and Tapad Inc formed a strategic alliance to license Tapad Device Graph to execute Brand Network's managed media campaigns. The collaboration will bring programmatic display and social advertising together into one streamlined portfolio to unify Brand Network's customer experience across all of their digital advertising touch points. Additionally, under the terms of the partnership, Tapads media services organization will be joining the Brand Networks organization to accelerate the companys entry into and management of programmatic display campaigns.",
+        "tokens":[
+            {
+                "text":"Brand Networks LLC",
+                "start":0,
+                "end":18,
+                "token_start":0,
+                "token_end":3,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"Tapad",
+                "start":23,
+                "end":28,
+                "token_start":4,
+                "token_end":5,
+                "entityLabel":"ORG"
+            },
+            {
+                "text":"Tapad",
+                "start":72,
+                "end":77,
+                "token_start":12,
+                "token_end":13,
+                "entityLabel":"ORG"
+            }
+        ],
+        "relations":[
+            {
+                "child":0,
+                "head":4,
+                "relationLabel":"StrategicAlliance"
+            },
+            {
+                "child":4,
+                "head":0,
+                "relationLabel":"StrategicAlliance"
+            }
+        ],
+        "meta":{
+            "source":"Thomson SDC alliances - Deal Number 3210368045.0"
+        }
+    }
+
