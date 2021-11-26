@@ -96,21 +96,24 @@ def main(json_loc: Path, train_file: Path, dev_file: Path, test_file: Path):
                 if pos > 0:
                     article_id = example["meta"]["source"]
                     article_id = article_id.split("Deal Number ")[1]
-                    if article_id.endswith("4"):
+                    split = example["meta"]["split"]
+                    if split == 'dev':
                         ids["dev"].add(article_id)
                         docs["dev"].append(doc)
                         count_pos["dev"] += pos
                         count_all["dev"] += pos + neg
-                    elif article_id.endswith("3"):
+                    elif split == 'test':
                         ids["test"].add(article_id)
                         docs["test"].append(doc)
                         count_pos["test"] += pos
                         count_all["test"] += pos + neg
-                    else:
+                    elif split == 'train':
                         ids["train"].add(article_id)
                         docs["train"].append(doc)
                         count_pos["train"] += pos
                         count_all["train"] += pos + neg
+                    else:
+                        msg.fail('Skipping doc because it is not specified as part of the train, test, or dev set.')
             except KeyError as e:
                 msg.fail(f"Skipping doc because of key error: {e} in {example['meta']['source']}")
 
