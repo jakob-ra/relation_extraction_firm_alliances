@@ -142,4 +142,7 @@ def main(json_loc: Path, train_file: Path, dev_file: Path, test_file: Path):
 
 
 if __name__ == "__main__":
-    typer.run(main(json_loc: Path, train_file: Path, dev_file: Path, test_file: Path))
+    typer.run(main)
+
+# json_loc = "C:/Users/Jakob/Documents/GitHub/relation_extraction_firm_alliances/assets/SDC_training_dict.json"
+# train_file = "C:/Users/Jakob/Documents/GitHub/relation_extraction_firm_alliances/assets/SDC_training_dict.json"
