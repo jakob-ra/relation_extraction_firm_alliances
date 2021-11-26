@@ -142,4 +142,4 @@ def main(json_loc: Path, train_file: Path, dev_file: Path, test_file: Path):
 
 
 if __name__ == "__main__":
-    typer.run(main)
+    typer.run(main(json_loc: Path, train_file: Path, dev_file: Path, test_file: Path))
