@@ -7,6 +7,8 @@ from spacy.tokens import Span, DocBin, Doc
 from spacy.vocab import Vocab
 from wasabi import Printer
 
+import spacy
+
 msg = Printer()
 
 SYMM_LABELS =  ['StrategicAlliance', 'JointVenture', 'Marketing', 'Manufacturing', 'ResearchandDevelopment',
