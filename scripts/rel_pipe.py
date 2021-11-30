@@ -226,9 +226,9 @@ class RelationExtractor(TrainablePipe):
 #     }
 
 def custom_getter(token, custom_attr):
-    res = token._
-    
-    return res[custom_attr]
+    relations  = token._.rel
+
+    return relations
 
 def score_relations(examples: Iterable[Example], threshold: float) -> Dict[str, Any]:
     """Score a batch of examples."""
