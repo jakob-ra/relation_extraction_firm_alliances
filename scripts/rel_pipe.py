@@ -205,36 +205,36 @@ class RelationExtractor(TrainablePipe):
         return res
 
 
-# def score_relations(examples: Iterable[Example], threshold: float) -> Dict[str, Any]:
-#     """Score a batch of examples."""
-#     micro_prf = PRFScore()
-#     for example in examples:
-#         gold = example.reference._.rel
-#         pred = example.predicted._.rel
-#         for key, pred_dict in pred.items():
-#             gold_labels = [k for (k, v) in gold.get(key, {}).items() if v == 1.0]
-#             for k, v in pred_dict.items():
-#                 if v >= threshold:
-#                     if k in gold_labels:
-#                         micro_prf.tp += 1
-#                     else:
-#                         micro_prf.fp += 1
-#                 else:
-#                     if k in gold_labels:
-#                         micro_prf.fn += 1
-#     return {
-#         "rel_micro_p": micro_prf.precision,
-#         "rel_micro_r": micro_prf.recall,
-#         "rel_micro_f": micro_prf.fscore,
-#     }
-
-def custom_getter(token, custom_attr):
-    relations  = token._.rel
-
-    return relations
-
 def score_relations(examples: Iterable[Example], threshold: float) -> Dict[str, Any]:
     """Score a batch of examples."""
-    scores = Scorer.score_cats(examples=examples, threshold=threshold, attr='rel', getter=custom_getter)
+    micro_prf = PRFScore()
+    for example in examples:
+        gold = example.reference._.rel
+        pred = example.predicted._.rel
+        for key, pred_dict in pred.items():
+            gold_labels = [k for (k, v) in gold.get(key, {}).items() if v == 1.0]
+            for k, v in pred_dict.items():
+                if v >= threshold:
+                    if k in gold_labels:
+                        micro_prf.tp += 1
+                    else:
+                        micro_prf.fp += 1
+                else:
+                    if k in gold_labels:
+                        micro_prf.fn += 1
+    return {
+        "rel_micro_p": micro_prf.precision,
+        "rel_micro_r": micro_prf.recall,
+        "rel_micro_f": micro_prf.fscore,
+    }
 
-    return scores
+# def custom_getter(token, custom_attr):
+#     relations  = token._.rel
+#
+#     return relations
+#
+# def score_relations(examples: Iterable[Example], threshold: float) -> Dict[str, Any]:
+#     """Score a batch of examples."""
+#     scores = Scorer.score_cats(examples=examples, threshold=threshold, attr='rel', getter=custom_getter)
+#
+#     return scores
