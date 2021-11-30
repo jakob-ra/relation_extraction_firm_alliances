@@ -1,0 +1,17 @@
+data:
+  cmd: python -m spacy run data
+  script:
+    - python ./scripts/parse_data.py assets/SDC_training_dict.json data/train.spacy
+      data/dev.spacy data/test.spacy
+  deps:
+    - path: assets/SDC_training_dict.json
+      md5: 15fa9ec4766c1ff2f942a51e60ebbb5b
+  outs:
+    - path: data/train.spacy
+      md5: f53bc7201700344240eee3a13df5bed7
+    - path: data/dev.spacy
+      md5: 79f4340f2d8adddc4a5ef612fcb56569
+    - path: data/test.spacy
+      md5: 29cd56783c17517ddfa989c7e24c746c
+  spacy_version: 3.2.0
+  spacy_git_version: 0fc3dee77
