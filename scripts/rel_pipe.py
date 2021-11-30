@@ -201,7 +201,7 @@ class RelationExtractor(TrainablePipe):
         """Score a batch of examples."""
         res = score_relations(examples, self.threshold)
         print(rel_f_per_type)
-        
+
         return res
 
 
