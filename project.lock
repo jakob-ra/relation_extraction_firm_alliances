@@ -5,12 +5,12 @@ train_cpu:
       data/train.spacy --paths.dev data/dev.spacy -c ./scripts/custom_functions.py
   deps:
     - path: data/train.spacy
-      md5: f53bc7201700344240eee3a13df5bed7
+      md5: 9d576806ac8ae143502a7dfde4ea90cb
     - path: data/dev.spacy
-      md5: 79f4340f2d8adddc4a5ef612fcb56569
+      md5: cb4a4f453b9bc993575b4b6905d83fe7
   outs:
     - path: training/model-best
-      md5: 8c03d8ce9bad6d0886e321681217a0c3
+      md5: 9890e2f69c7136820cb8c1cf274fc4b5
   spacy_version: 3.2.0
   spacy_git_version: 0fc3dee77
 evaluate:
@@ -23,5 +23,22 @@ evaluate:
     - path: data/test.spacy
       md5: 29cd56783c17517ddfa989c7e24c746c
   outs: []
+  spacy_version: 3.2.0
+  spacy_git_version: 0fc3dee77
+data:
+  cmd: python -m spacy run data
+  script:
+    - python ./scripts/parse_data.py assets/SDC_training_dict.json data/train.spacy
+      data/dev.spacy data/test.spacy
+  deps:
+    - path: assets/SDC_training_dict.json
+      md5: d1a06026e403bfe8dd5bcecd46470adc
+  outs:
+    - path: data/train.spacy
+      md5: 9d576806ac8ae143502a7dfde4ea90cb
+    - path: data/dev.spacy
+      md5: cb4a4f453b9bc993575b4b6905d83fe7
+    - path: data/test.spacy
+      md5: 8dcd31887358e1d2d1e0ed2ea2f71341
   spacy_version: 3.2.0
   spacy_git_version: 0fc3dee77

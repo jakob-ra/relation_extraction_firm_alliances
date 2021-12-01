@@ -207,6 +207,11 @@ class RelationExtractor(TrainablePipe):
 def score_relations(examples: Iterable[Example], threshold: float) -> Dict[str, Any]:
     """Score a batch of examples."""
     micro_prf = PRFScore()
+    # get labels from first example
+    for example in examples:
+        labels = list(list(example.reference._.rel.values())[0].keys())
+        break
+    f_per_type = {label: PRFScore() for label in labels}
     for example in examples:
         gold = example.reference._.rel
         pred = example.predicted._.rel
@@ -216,16 +221,26 @@ def score_relations(examples: Iterable[Example], threshold: float) -> Dict[str, 
                 if v >= threshold:
                     if k in gold_labels:
                         micro_prf.tp += 1
+                        f_per_type[k].tp += 1
                     else:
                         micro_prf.fp += 1
+                        f_per_type[k].fp += 1
                 else:
                     if k in gold_labels:
                         micro_prf.fn += 1
-    return {
+                        f_per_type[k].fn += 1
+
+    scores = {
         "rel_micro_p": micro_prf.precision,
         "rel_micro_r": micro_prf.recall,
-        "rel_micro_f": micro_prf.fscore,
+        "rel_micro_f": micro_prf.fscore
     }
+
+    for label in labels:
+        label_name = label.replace(' ', '_').lower()
+        scores["rel_f_" + label_name] = f_per_type[label].to_dict()['f']
+
+    return scores
 
 # def custom_getter(token, custom_attr):
 #     relations  = token._.rel
@@ -237,3 +252,55 @@ def score_relations(examples: Iterable[Example], threshold: float) -> Dict[str, 
 #     scores = Scorer.score_cats(examples=examples, threshold=threshold, attr='rel', getter=custom_getter)
 #
 #     return scores
+
+
+# gold = {(0, 0):
+#      {'Strategic Alliance': 0.0, 'Joint Venture': 0.0, 'Marketing agreement': 0.0,
+#       'Manufacturing agreement': 0.0, 'Research and Development agreement': 0.0, 'Licensing agreement': 0.0,
+#       'Supply agreement': 0.0, 'Exploration agreement': 0.0, 'Technology Transfer': 0.0},
+#  (0, 3):
+#      {'Strategic Alliance': 1.0, 'Joint Venture': 0.0, 'Marketing agreement': 0.0,
+#       'Manufacturing agreement': 0.0, 'Research and Development agreement': 0.0, 'Licensing agreement': 0.0,
+#       'Supply agreement': 0.0, 'Exploration agreement': 0.0, 'Technology Transfer': 0.0},
+#  (3, 0):
+#      {'Strategic Alliance': 1.0, 'Joint Venture': 0.0, 'Marketing agreement': 0.0,
+#       'Manufacturing agreement': 0.0, 'Research and Development agreement': 0.0, 'Licensing agreement': 0.0,
+#       'Supply agreement': 0.0, 'Exploration agreement': 0.0, 'Technology Transfer': 0.0}}
+#
+# pred = {(0, 0):
+#      {'Strategic Alliance': 0.0, 'Joint Venture': 0.0, 'Marketing agreement': 0.0,
+#       'Manufacturing agreement': 0.0, 'Research and Development agreement': 0.0, 'Licensing agreement': 0.0,
+#       'Supply agreement': 0.0, 'Exploration agreement': 0.0, 'Technology Transfer': 0.0},
+#  (0, 3):
+#      {'Strategic Alliance': 1.0, 'Joint Venture': 0.0, 'Marketing agreement': 0.0,
+#       'Manufacturing agreement': 0.0, 'Research and Development agreement': 0.0, 'Licensing agreement': 0.0,
+#       'Supply agreement': 0.0, 'Exploration agreement': 0.0, 'Technology Transfer': 0.0},
+#  (3, 0):
+#      {'Strategic Alliance': 0.0, 'Joint Venture': 1.0, 'Marketing agreement': 0.0,
+#       'Manufacturing agreement': 0.0, 'Research and Development agreement': 0.0, 'Licensing agreement': 0.0,
+#       'Supply agreement': 0.0, 'Exploration agreement': 0.0, 'Technology Transfer': 0.0}}
+#
+# pred.items()
+#
+# micro_prf = PRFScore()
+# for key, pred_dict in pred.items():
+#     gold_labels = [k for (k, v) in gold.get(key, {}).items() if v == 1.0]
+#     for k, v in pred_dict.items():
+#         if v >= 0.5:
+#             if k in gold_labels:
+#                 micro_prf.tp += 1
+#             else:
+#                 micro_prf.fp += 1
+#         else:
+#             if k in gold_labels:
+#                 micro_prf.fn += 1
+#
+# scores = {
+#         "rel_micro_p": micro_prf.precision,
+#         "rel_micro_r": micro_prf.recall,
+#         "rel_micro_f": micro_prf.fscore,
+#     }
+#
+# print(scores)
+
+

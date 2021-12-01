@@ -77,6 +77,7 @@ def _score_and_format(examples, thresholds):
         print(f"threshold {'{:.2f}'.format(threshold)} \t {results}")
 
 
+
 if __name__ == "__main__":
     # nlp = spacy.load(Path.cwd() / "training/model-best")
     # text = ["Siemens AG and IBM announced a strategic alliance to jointly research cloud-based computing."]
