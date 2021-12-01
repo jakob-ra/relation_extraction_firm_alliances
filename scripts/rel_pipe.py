@@ -200,7 +200,6 @@ class RelationExtractor(TrainablePipe):
     def score(self, examples: Iterable[Example], **kwargs) -> Dict[str, Any]:
         """Score a batch of examples."""
         res = score_relations(examples, self.threshold)
-        print(res["rel_f_per_type"])
 
         return res
 

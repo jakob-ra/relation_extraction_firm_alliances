@@ -11,7 +11,6 @@ from rel_pipe import make_relation_extractor, score_relations
 # make the config work
 from rel_model import create_relation_model, create_classification_layer, create_instances, create_tensors
 
-
 def main(trained_pipeline: Path, test_data: Path, print_details: bool):
     nlp = spacy.load(trained_pipeline)
 
@@ -79,4 +78,8 @@ def _score_and_format(examples, thresholds):
 
 
 if __name__ == "__main__":
+    # nlp = spacy.load(Path.cwd() / "training/model-best")
+    # text = ["Siemens AG and IBM announced a strategic alliance to jointly research cloud-based computing."]
+    # nlp(text)
+
     typer.run(main)
