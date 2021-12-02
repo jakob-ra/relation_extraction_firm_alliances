@@ -2,3 +2,4 @@ data
 training
 assets
 venv
+assets/SDC_training_dict.json
