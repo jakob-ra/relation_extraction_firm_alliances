@@ -118,6 +118,7 @@ def main(json_loc: Path, train_file: Path, dev_file: Path, test_file: Path):
                         msg.fail('Skipping doc because it is not specified as part of the train, test, or dev set.')
             except KeyError as e:
                 msg.fail(f"Skipping doc because of key error: {e} in {example['meta']['source']}")
+            print(example)
 
     docbin = DocBin(docs=docs["train"], store_user_data=True)
     docbin.to_disk(train_file)
