@@ -20,7 +20,7 @@ directories: ["scripts", "configs", "assets", "data", "training"]
 assets:
     - dest: ${vars.annotations}
       description: "Gold-standard REL annotations created with Prodigy"
-      url: 'https://drive.google.com/file/d/1NfcDxykxATnMGzfAIJpmlKU84M4TF4ff/view?usp=sharing' 
+      url: 'https://drive.google.com/file/d/17yRCFY0RxKJyegTHUsftbo0M_a4C5BcO/view?usp=sharing'
 
 workflows:
   all:

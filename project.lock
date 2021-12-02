@@ -19,9 +19,9 @@ evaluate:
     - python ./scripts/evaluate.py training/model-best data/test.spacy False
   deps:
     - path: training/model-best
-      md5: 8c03d8ce9bad6d0886e321681217a0c3
+      md5: 9890e2f69c7136820cb8c1cf274fc4b5
     - path: data/test.spacy
-      md5: 29cd56783c17517ddfa989c7e24c746c
+      md5: 8dcd31887358e1d2d1e0ed2ea2f71341
   outs: []
   spacy_version: 3.2.0
   spacy_git_version: 0fc3dee77
