@@ -240,8 +240,6 @@ def score_relations(examples: Iterable[Example], threshold: float) -> Dict[str, 
         label_name = label.replace(' ', '_').lower()
         scores["rel_f_" + label_name] = f_per_type[label].to_dict()['f']
 
-    print(scores)
-
     return scores
 
 # def custom_getter(token, custom_attr):
