@@ -144,7 +144,6 @@ class RelationExtractor(TrainablePipe):
         """Find the loss and gradient of loss for the batch of documents and
         their predicted scores."""
         truths = self._examples_to_truth(examples)
-        truths = truths[0]
         gradient = scores - truths
         mean_square_error = (gradient ** 2).sum(axis=1).mean()
         return float(mean_square_error), gradient
