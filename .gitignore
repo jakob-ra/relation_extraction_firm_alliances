@@ -2,3 +2,4 @@ data
 training
 assets
 venv
+project.lock
