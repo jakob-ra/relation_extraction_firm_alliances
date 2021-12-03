@@ -42,3 +42,18 @@ data:
       md5: b32a1aa122e3c376490b3fd4500674bc
   spacy_version: 3.2.0
   spacy_git_version: 0fc3dee77
+train_gpu:
+  cmd: python -m spacy run train_gpu
+  script:
+    - python -m spacy train configs/rel_trf.cfg --output training --paths.train data/train.spacy
+      --paths.dev data/dev.spacy -c ./scripts/custom_functions.py --gpu-id 0
+  deps:
+    - path: data/train.spacy
+      md5: f8a5d931baca0361bcb2e4ee70cf2c82
+    - path: data/dev.spacy
+      md5: e3185406a8b626e2ef901fde86be86ed
+  outs:
+    - path: training/model-best
+      md5: ef0babcc2f040e19fced8504616e230a
+  spacy_version: 3.2.0
+  spacy_git_version: 0fc3dee77
