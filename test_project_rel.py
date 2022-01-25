@@ -1,3 +1,4 @@
+import pandas as pd
 from spacy.cli.project.assets import project_assets
 from pathlib import Path
 from spacy.cli.project.run import project_run
@@ -6,21 +7,34 @@ import random
 import typer
 from spacy.tokens import DocBin, Doc
 from spacy.training.example import Example
-from rel_pipe import make_relation_extractor, score_relations
-from rel_model import create_relation_model, create_classification_layer, create_instances, create_tensors
+from scripts.rel_pipe import make_relation_extractor, score_relations
+from scripts.rel_model import create_relation_model, create_classification_layer, create_instances, create_tensors
 
 # We load the relation extraction (REL)
-nlp = spacy.load("training/model-best")
+nlp = spacy.load('en_core_web_trf', exclude=['tagger', 'parser', 'attribute_ruler', 'lemmatizer'])
+nlp.add_pipe('sentencizer', after='transformer')
+nlp.add_pipe('organization_extractor', after='ner')
 
-# We take the entities generated from the NER pipeline and input them to the REL pipeline
-for name, proc in nlp.pipeline:
-        doc = proc(doc)# Here, we split the paragraph into sentences and apply the relation extraction for each pair of entities found in each sentence.for value, rel_dict in doc._.rel.items():
-        for sent in doc.sents:
-            for e in sent.ents:
-                for b in sent.ents:
-                    if e.start == value[0] and b.start == value[1]:
-                        if rel_dict['s'] >=0.9:
-                            print(f" entities: {e.text, b.text} --> predicted relation: {rel_dict}")
+nlp_rel = spacy.load('training/model-best', vocab=nlp.vocab)
+nlp.add_pipe('transformer', name='rel_transformer', source=nlp_rel)
+nlp.add_pipe('relation_extractor', source=nlp_rel)
+nlp.component_names
+
+text = ['Microsoft Inc and Sun Microsystems just announced a new strategic alliance to jointly research'
+      'cloud computing infrastructure. Barack Obama mentioned something else.']
+
+for doc in nlp.pipe(text):
+    print(f"spans: {[(e.start, e.text, e.label_) for e in doc.ents]}")
+    for entry in doc._.rel.values():
+        print([x for x in entry.items() if x[1] >= 0.9])
+        [x for x in entry.items()]
+
+kb = pd.io.json.read_json(path_or_buf='/Users/Jakob/Documents/Thomson_SDC/Full/SDC_training_dict.json',
+                          orient='records', lines=True)
+
+
+sdc = pd.read_pickle('/Users/Jakob/Documents/Thomson_SDC/Full/SDC_Strategic_Alliances_Full.pkl')
+
 
 def test_rel_project():
     root = Path(__file__).parent
