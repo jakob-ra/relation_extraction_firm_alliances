@@ -190,7 +190,7 @@ class RelationExtractor(TrainablePipe):
             if mode_ref:
                 nr_instances += len(self.model.attrs["get_instances"](eg.reference))
             else:
-                nr_instances += len(self.model.attrs["get_instances"](eg.predicted))
+                nr_instances += len(self.model.attrs["get_instances"](eg.reference))
         if nr_instances == 0:
             print("zero instances, returning None")
             return None
