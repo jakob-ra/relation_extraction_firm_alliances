@@ -3,3 +3,5 @@ training
 assets
 venv
 project.lock
+.idea/rGraphicsSettings.xml
+.idea/rSettings.xml
