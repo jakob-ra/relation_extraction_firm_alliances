@@ -176,18 +176,22 @@ class RelationExtractor(TrainablePipe):
 
         subbatch = list(islice(get_examples(), 10))
         doc_sample = [eg.reference for eg in subbatch]
-        label_sample = self._examples_to_truth(subbatch)
+        label_sample = self._examples_to_truth(subbatch, mode_ref=True)
         if label_sample is None:
             raise ValueError("Call begin_training with relevant entities and relations annotated in "
                              "at least a few reference examples!")
         self.model.initialize(X=doc_sample, Y=label_sample)
 
-    def _examples_to_truth(self, examples: List[Example]) -> Optional[numpy.ndarray]:
+    def _examples_to_truth(self, examples: List[Example], mode_ref=False) -> Optional[numpy.ndarray]:
         # check that there are actually any candidate instances in this batch of examples
         nr_instances = 0
         for eg in examples:
-            nr_instances += len(self.model.attrs["get_instances"](eg.reference))
+            if mode_ref:
+                nr_instances += len(self.model.attrs["get_instances"](eg.reference))
+            else:
+                nr_instances += len(self.model.attrs["get_instances"](eg.predicted))
         if nr_instances == 0:
+            print("zero instances, returning None")
             return None
 
         truths = numpy.zeros((nr_instances, len(self.labels)), dtype="f")
