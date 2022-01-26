@@ -85,6 +85,7 @@ class RelationExtractor(TrainablePipe):
 
         predictions = self.predict([doc])
         self.set_annotations([doc], predictions)
+
         return doc
 
     def predict(self, docs: Iterable[Doc]) -> Floats2d:
