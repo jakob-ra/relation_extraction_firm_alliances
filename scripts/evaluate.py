@@ -23,7 +23,7 @@ def main(trained_pipeline: Path, test_data: Path, print_details: bool):
             words=[t.text for t in gold],
             spaces=[t.whitespace_ for t in gold],
         )
-        # pred.ents = gold.ents
+        pred.ents = gold.ents
         for name, proc in nlp.pipeline:
             pred = proc(pred)
         examples.append(Example(pred, gold))
