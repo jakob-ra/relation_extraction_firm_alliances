@@ -23,7 +23,7 @@ def main(trained_pipeline: Path, test_data: Path, print_details: bool):
             words=[t.text for t in gold],
             spaces=[t.whitespace_ for t in gold],
         )
-        # pred.ents = gold.ents
+        pred.ents = gold.ents
         for name, proc in nlp.pipeline:
             pred = proc(pred)
         examples.append(Example(pred, gold))
@@ -49,7 +49,7 @@ def main(trained_pipeline: Path, test_data: Path, print_details: bool):
             words=[t.text for t in gold],
             spaces=[t.whitespace_ for t in gold],
         )
-        # pred.ents = gold.ents
+        pred.ents = gold.ents
         relation_extractor = nlp.get_pipe("relation_extractor")
         get_instances = relation_extractor.model.attrs["get_instances"]
         for (e1, e2) in get_instances(pred):
