@@ -80,7 +80,7 @@ class RelationExtractor(TrainablePipe):
         # check that there are actually any candidate instances in this batch of examples
         total_instances = len(self.model.attrs["get_instances"](doc))
         if total_instances <= 1:
-            msg.info("Could not determine more than one instance in doc - returning doc as is.")
+            # msg.info("Could not determine more than one instance in doc - returning doc as is.")
             return doc
 
         predictions = self.predict([doc])
