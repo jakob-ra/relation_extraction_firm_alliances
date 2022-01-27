@@ -12,17 +12,13 @@ import spacy
 msg = Printer()
 
 SYMM_LABELS =  ['StrategicAlliance', 'JointVenture', 'Marketing', 'Manufacturing', 'ResearchandDevelopment',
-       'Licensing', 'Supply', 'Exploration', 'TechnologyTransfer']
+       'Licensing']
 MAP_LABELS = {
     'StrategicAlliance': 'Strategic Alliance',
     'JointVenture': 'Joint Venture',
     'Marketing': 'Marketing agreement',
     'Manufacturing': 'Manufacturing agreement',
-    'ResearchandDevelopment': 'Research and Development agreement',
-    'Licensing': 'Licensing agreement',
-    'Supply': 'Supply agreement',
-    'Exploration': 'Exploration agreement',
-    'TechnologyTransfer': 'Technology Transfer'
+    'ResearchandDevelopment': 'Research and Development agreement'
 }
 
 nlp = spacy.blank("en")
