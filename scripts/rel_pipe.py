@@ -79,8 +79,8 @@ class RelationExtractor(TrainablePipe):
         """Apply the pipe to a Doc."""
         # check that there are actually any candidate instances in this batch of examples
         total_instances = len(self.model.attrs["get_instances"](doc))
-        if total_instances == 0:
-            msg.info("Could not determine any instances in doc - returning doc as is.")
+        if total_instances <= 1:
+            msg.info("Could not determine more than one instance in doc - returning doc as is.")
             return doc
 
         predictions = self.predict([doc])
@@ -92,8 +92,8 @@ class RelationExtractor(TrainablePipe):
         """Apply the pipeline's model to a batch of docs, without modifying them."""
         get_instances = self.model.attrs["get_instances"]
         total_instances = sum([len(get_instances(doc)) for doc in docs])
-        if total_instances == 0:
-            msg.info("Could not determine any instances in any docs - can not make any predictions.")
+        if total_instances <= 1:
+            msg.info("Could not determine more than one instance in any docs - can not make any predictions.")
         scores = self.model.predict(docs)
         return self.model.ops.asarray(scores)
 
@@ -130,8 +130,8 @@ class RelationExtractor(TrainablePipe):
         total_instances = 0
         for eg in examples:
             total_instances += len(self.model.attrs["get_instances"](eg.predicted))
-        if total_instances == 0:
-            msg.info("Could not determine any instances in doc.")
+        if total_instances <= 1:
+            msg.info("Less than two instances in doc.")
             return losses
 
         # run the model
@@ -191,8 +191,8 @@ class RelationExtractor(TrainablePipe):
                 nr_instances += len(self.model.attrs["get_instances"](eg.reference))
             else:
                 nr_instances += len(self.model.attrs["get_instances"](eg.reference))
-        if nr_instances == 0:
-            print("zero instances, returning None")
+        if nr_instances <= 1:
+            print("less than two instances, returning None")
             return None
 
         truths = numpy.zeros((nr_instances, len(self.labels)), dtype="f")
