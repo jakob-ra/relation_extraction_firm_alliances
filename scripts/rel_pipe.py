@@ -94,7 +94,7 @@ class RelationExtractor(TrainablePipe):
         total_instances = sum([len(get_instances(doc)) for doc in docs])
         if total_instances <= 1:
             msg.info("Could not determine more than one instance in any docs - can not make any predictions.")
-            return None
+            scores = None
         scores = self.model.predict(docs)
         return self.model.ops.asarray(scores)
 
