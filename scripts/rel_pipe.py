@@ -95,7 +95,8 @@ class RelationExtractor(TrainablePipe):
         if total_instances <= 1:
             msg.info("Could not determine more than one instance in any docs - can not make any predictions.")
             scores = None
-        scores = self.model.predict(docs)
+        else:
+            scores = self.model.predict(docs)
         return self.model.ops.asarray(scores)
 
     def set_annotations(self, docs: Iterable[Doc], scores: Floats2d) -> None:
