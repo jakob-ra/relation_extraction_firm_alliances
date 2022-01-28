@@ -179,7 +179,7 @@ class RelationExtractor(TrainablePipe):
 
         subbatch = list(islice(get_examples(), 10))
         doc_sample = [eg.reference for eg in subbatch]
-        label_sample = self._examples_to_truth(subbatch, mode_ref=False)
+        label_sample = self._examples_to_truth(subbatch, mode_ref=True)
         if label_sample is None:
             raise ValueError("Call begin_training with relevant entities and relations annotated in "
                              "at least a few reference examples!")
