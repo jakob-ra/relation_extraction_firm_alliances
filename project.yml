@@ -72,7 +72,7 @@ commands:
   - name: "evaluate"
     help: "Apply the best model to new, unseen text, and measure accuracy at different thresholds."
     script:
-      - "python ./scripts/evaluate.py ${vars.trained_model} ${vars.test_file} False"
+      - "python ./scripts/evaluate.py ${vars.trained_model} ${vars.test_file} True"
     deps:
       - ${vars.trained_model}
       - ${vars.test_file}
