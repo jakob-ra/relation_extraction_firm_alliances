@@ -80,7 +80,7 @@ class RelationExtractor(TrainablePipe):
         # check that there are actually any candidate instances in this batch of examples
         total_instances = len(self.model.attrs["get_instances"](doc))
         if total_instances <= 1:
-            # msg.info("Could not determine more than one instance in doc - returning doc as is.")
+            msg.info("Could not determine more than one instance in doc - returning doc as is.")
             return doc
 
         predictions = self.predict([doc])
@@ -94,6 +94,8 @@ class RelationExtractor(TrainablePipe):
         total_instances = sum([len(get_instances(doc)) for doc in docs])
         if total_instances <= 1:
             msg.info("Could not determine more than one instance in any docs - can not make any predictions.")
+            scores = numpy.zeros((total_instances, len(self.labels)), dtype="f")
+            return scores
         scores = self.model.predict(docs)
         return self.model.ops.asarray(scores)
 
@@ -177,7 +179,7 @@ class RelationExtractor(TrainablePipe):
 
         subbatch = list(islice(get_examples(), 10))
         doc_sample = [eg.reference for eg in subbatch]
-        label_sample = self._examples_to_truth(subbatch, mode_ref=True)
+        label_sample = self._examples_to_truth(subbatch, mode_ref=False)
         if label_sample is None:
             raise ValueError("Call begin_training with relevant entities and relations annotated in "
                              "at least a few reference examples!")

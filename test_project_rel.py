@@ -20,6 +20,8 @@ nlp.add_pipe('transformer', name='rel_transformer', source=nlp_rel)
 nlp.add_pipe('relation_extractor', source=nlp_rel)
 nlp.component_names
 
+nlp = spacy.load('training/model-best')
+
 text = ['Microsoft Inc and Sun Microsystems just announced a new strategic alliance to jointly research'
       'cloud computing infrastructure. Barack Obama mentioned something else.']
 
