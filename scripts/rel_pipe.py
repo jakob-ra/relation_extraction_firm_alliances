@@ -22,6 +22,8 @@ msg = Printer()
 def organization_extractor(doc):
     doc.ents = tuple([e for e in doc.ents if e.label_ == 'ORG'])
 
+    print(doc.ents)
+
     return doc
 
 @Language.factory(
