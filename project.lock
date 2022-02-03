@@ -16,7 +16,7 @@ train_cpu:
 evaluate:
   cmd: python -m spacy run evaluate
   script:
-    - python ./scripts/evaluate.py training/model-best data/test.spacy False
+    - python ./scripts/evaluate.py training/model-best data/test.spacy True
   deps:
     - path: training/model-best
       md5: 3c5df18d47dec77bb1ab6af480e01592
