@@ -20,7 +20,8 @@ directories: ["scripts", "configs", "assets", "data", "training"]
 assets:
     - dest: ${vars.annotations}
       description: "Gold-standard REL annotations created with Prodigy"
-      url: 'https://drive.google.com/uc?id=1Zneg3IbyGuQjLAU7s7HqtMeHmhz5SK41&export=download'
+      url: 'https://drive.google.com/uc?id=1yp5VQwbvv9xVZ__l5PsHo1TbNqI8P6I3&export=download'
+
 
 
 workflows:
@@ -72,7 +73,7 @@ commands:
   - name: "evaluate"
     help: "Apply the best model to new, unseen text, and measure accuracy at different thresholds."
     script:
-      - "python ./scripts/evaluate.py ${vars.trained_model} ${vars.test_file} True"
+      - "python ./scripts/evaluate.py ${vars.trained_model} ${vars.test_file} False"
     deps:
       - ${vars.trained_model}
       - ${vars.test_file}

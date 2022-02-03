@@ -34,11 +34,14 @@ def main(trained_pipeline: Path, test_data: Path, print_details: bool):
             print(f"Text: {gold.text}")
             print(f"spans: {[(e.start, e.text, e.label_) for e in pred.ents]}")
             for value, rel_dict in pred._.rel.items():
-                gold_labels = [k for (k, v) in gold._.rel[value].items() if v == 1.0]
-                if gold_labels:
-                    print(
-                        f" pair: {value} --> gold labels: {gold_labels} --> predicted values: {rel_dict}"
-                    )
+                try:
+                    gold_labels = [k for (k, v) in gold._.rel[value].items() if v == 1.0]
+                    if gold_labels:
+                        print(
+                            f" pair: {value} --> gold labels: {gold_labels} --> predicted values: {rel_dict}"
+                        )
+                except:
+                    continue
             print()
 
     random_examples = []
