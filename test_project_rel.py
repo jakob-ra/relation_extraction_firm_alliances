@@ -31,6 +31,8 @@ for doc in nlp.pipe(text):
         print([x for x in entry.items() if x[1] >= 0.9])
         [x for x in entry.items()]
 
+text = ['Microsoft Inc and Sun Microsystems just announced that they will break up.']
+
 kb = pd.io.json.read_json(path_or_buf='/Users/Jakob/Documents/Thomson_SDC/Full/SDC_training_dict.json',
                           orient='records', lines=True)
 
