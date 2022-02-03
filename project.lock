@@ -49,11 +49,11 @@ train_gpu:
       --paths.dev data/dev.spacy -c ./scripts/custom_functions.py --gpu-id 0
   deps:
     - path: data/train.spacy
-      md5: f8a5d931baca0361bcb2e4ee70cf2c82
+      md5: 193c36d480b193a41a28bf5cb27d70e1
     - path: data/dev.spacy
-      md5: e3185406a8b626e2ef901fde86be86ed
+      md5: c1d2b1ae79f0daf8c24f85c16bd93258
   outs:
     - path: training/model-best
-      md5: ef0babcc2f040e19fced8504616e230a
+      md5: 1a57bd0cb19bb905002f5bd5a3bec158
   spacy_version: 3.2.0
   spacy_git_version: 0fc3dee77

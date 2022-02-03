@@ -7,3 +7,4 @@ project.lock
 .idea/rSettings.xml
 scripts/__pycache__/rel_pipe.cpython-39.pyc
 scripts/__pycache__/rel_pipe.cpython-39.pyc
+project.lock
