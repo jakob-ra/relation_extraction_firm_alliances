@@ -65,7 +65,7 @@ def main(trained_pipeline: Path, test_data: Path, print_details: bool):
         examples.append(Example(pred, gold))
 
         # Print the gold and prediction every 10 predictions
-        if print_details and (len(examples) + 1)//10 == 0:
+        if print_details and len(examples)//10 == 0:
             print()
             print(f"Text: {gold.text}")
             print(f"spans: {[(e.start, e.text, e.label_) for e in pred.ents]}")
