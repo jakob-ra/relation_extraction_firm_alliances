@@ -33,12 +33,12 @@ def main(trained_pipeline: Path, test_data: Path, print_details: bool):
     start = time.time()
     preds = nlp.pipe(docs)
     end = time.time()
-    print(f'Full pipeline: {name}, elapsed time {end - start}')
+    print(f'Full pipeline: elapsed time {end - start}')
 
     examples = []
     for gold, pred in zip(docs, preds):
         examples.append(Example(pred, gold))
-        
+
     examples = []
     for gold in docs:
         pred = Doc(
