@@ -20,6 +20,7 @@ msg = Printer()
 
 @Language.component("organization_extractor")
 def organization_extractor(doc):
+    print(doc.ents)
     doc.ents = tuple([e for e in doc.ents if e.label_ == 'ORG'])
 
     return doc
