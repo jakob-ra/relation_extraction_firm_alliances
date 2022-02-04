@@ -29,7 +29,6 @@ def main(trained_pipeline: Path, test_data: Path, print_details: bool):
 
     doc_bin = DocBin(store_user_data=True).from_disk(test_data)
     docs = doc_bin.get_docs(nlp.vocab)
-    docs = list(docs)[:100]
 
     start = time.time()
     preds = nlp.pipe(docs)
