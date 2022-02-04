@@ -28,6 +28,7 @@ def main(trained_pipeline: Path, test_data: Path, print_details: bool):
 
     doc_bin = DocBin(store_user_data=True).from_disk(test_data)
     docs = doc_bin.get_docs(nlp.vocab)
+    docs = docs[:10]
     preds = nlp.pipe(docs)
     examples = []
     # for gold in docs:
