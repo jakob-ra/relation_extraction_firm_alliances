@@ -217,9 +217,8 @@ def score_relations(examples: Iterable[Example], threshold: float) -> Dict[str, 
     """Score a batch of examples."""
     micro_prf = PRFScore()
     # get labels from first example
-    for example in examples:
+    for example in list(examples)[0]:
         labels = list(list(example.reference._.rel.values())[0].keys())
-        break
     f_per_type = {label: PRFScore() for label in labels}
     for example in examples:
         gold = example.reference._.rel
