@@ -36,6 +36,10 @@ def main(trained_pipeline: Path, test_data: Path, print_details: bool):
     print(f'Full pipeline: {name}, elapsed time {end - start}')
 
     examples = []
+    for gold, pred in zip(docs, preds):
+        examples.append(Example(pred, gold))
+        
+    examples = []
     for gold in docs:
         pred = Doc(
             nlp.vocab,
@@ -66,8 +70,6 @@ def main(trained_pipeline: Path, test_data: Path, print_details: bool):
                     continue
             print()
 
-    for gold, pred in zip(docs, preds):
-        examples.append(Example(pred, gold))
 
     # random baseline
     # random_examples = []
