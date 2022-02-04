@@ -35,6 +35,7 @@ def main(trained_pipeline: Path, test_data: Path, print_details: bool):
     end = time.time()
     print(f'Full pipeline: elapsed time {end - start}')
 
+    print(list[preds][0])
     print('start appending')
     examples = []
     for gold, pred in zip(docs, preds):
