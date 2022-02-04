@@ -221,7 +221,7 @@ def score_relations(examples: Iterable[Example], threshold: float) -> Dict[str, 
     for example in examples:
         labels = list(list(example.reference._.rel.values())[0].keys())
         break
-    f_per_type = {label: PRFScore() for label in labels}
+    # f_per_type = {label: PRFScore() for label in labels}
     for example in examples:
         gold = example.reference._.rel
         pred = example.predicted._.rel
@@ -231,14 +231,14 @@ def score_relations(examples: Iterable[Example], threshold: float) -> Dict[str, 
                 if v >= threshold:
                     if k in gold_labels:
                         micro_prf.tp += 1
-                        f_per_type[k].tp += 1
+                        # f_per_type[k].tp += 1
                     else:
                         micro_prf.fp += 1
-                        f_per_type[k].fp += 1
+                        # f_per_type[k].fp += 1
                 else:
                     if k in gold_labels:
                         micro_prf.fn += 1
-                        f_per_type[k].fn += 1
+                        # f_per_type[k].fn += 1
 
     scores = {
         "rel_micro_p": micro_prf.precision,
@@ -246,9 +246,9 @@ def score_relations(examples: Iterable[Example], threshold: float) -> Dict[str, 
         "rel_micro_f": micro_prf.fscore
     }
 
-    for label in labels:
-        label_name = label.replace(' ', '_').lower()
-        scores["rel_f_" + label_name] = f_per_type[label].to_dict()['f']
+    # for label in labels:
+    #     label_name = label.replace(' ', '_').lower()
+    #     scores["rel_f_" + label_name] = f_per_type[label].to_dict()['f']
 
     return scores
 
