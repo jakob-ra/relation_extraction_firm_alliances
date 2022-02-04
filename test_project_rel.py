@@ -27,7 +27,7 @@ texts = [['Microsoft Inc and Sun Microsystems just announced a new strategic all
       'cloud computing infrastructure. Barack Obama mentioned something else.', 'Clark Development announced '
       'a new partnership with BlissCo.']]
 
-for doc in nlp.pipe(test.document.values):
+for doc in nlp.pipe(texts):
     print(f"spans: {[(e.start, e.text, e.label_) for e in doc.ents]}")
     for entry in doc._.rel.values():
         print([x for x in entry.items() if x[1] >= 0.9])
