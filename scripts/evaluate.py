@@ -35,7 +35,7 @@ def main(trained_pipeline: Path, test_data: Path, print_details: bool):
     end = time.time()
     print(f'Full pipeline: elapsed time {end - start}')
 
-
+    print('start appending')
     examples = []
     for gold, pred in zip(docs, preds):
         examples.append(Example(pred, gold))
@@ -92,7 +92,7 @@ def main(trained_pipeline: Path, test_data: Path, print_details: bool):
     #             pred._.rel[offset][label] = random.uniform(0, 1)
     #     random_examples.append(Example(pred, gold))
 
-    thresholds = [0.000, 0.050, 0.100, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.99, 0.999]
+    thresholds = [0.5, 0.8, 0.9, 0.99]
     # print()
     # print("Random baseline:")
     # _score_and_format(random_examples, thresholds)
