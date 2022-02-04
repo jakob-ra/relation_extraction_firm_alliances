@@ -41,7 +41,7 @@ def main(trained_pipeline: Path, test_data: Path, print_details: bool):
             start = time.time()
             pred = proc(pred)
             end = time.time()
-            print(f'Pipeline component: {name}, elapsed time {end - start})
+            print(f'Pipeline component: {name}, elapsed time {end - start}')
         examples.append(Example(pred, gold))
 
         # Print the gold and prediction, if gold label is not 0
