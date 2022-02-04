@@ -12,7 +12,16 @@ from rel_pipe import make_relation_extractor, score_relations
 from rel_model import create_relation_model, create_classification_layer, create_instances, create_tensors
 
 def main(trained_pipeline: Path, test_data: Path, print_details: bool):
-    nlp = spacy.load(trained_pipeline)
+    nlp_rel = spacy.load(trained_pipeline)
+
+    nlp = spacy.load('en_core_web_trf', exclude=['tagger', 'parser', 'attribute_ruler', 'lemmatizer'],
+                     vocab=nlp_rel.vocab)
+    nlp.add_pipe('sentencizer', after='transformer')
+    nlp.add_pipe('organization_extractor', after='ner')
+
+    nlp.add_pipe('transformer', name='rel_transformer', source=nlp_rel)
+    nlp.add_pipe('relation_extractor', source=nlp_rel)
+    print(nlp.component_names)
 
     doc_bin = DocBin(store_user_data=True).from_disk(test_data)
     docs = doc_bin.get_docs(nlp.vocab)
@@ -23,7 +32,7 @@ def main(trained_pipeline: Path, test_data: Path, print_details: bool):
             words=[t.text for t in gold],
             spaces=[t.whitespace_ for t in gold],
         )
-        pred.ents = gold.ents
+        # pred.ents = gold.ents
         for name, proc in nlp.pipeline:
             pred = proc(pred)
         examples.append(Example(pred, gold))
@@ -52,7 +61,7 @@ def main(trained_pipeline: Path, test_data: Path, print_details: bool):
             words=[t.text for t in gold],
             spaces=[t.whitespace_ for t in gold],
         )
-        pred.ents = gold.ents
+        # pred.ents = gold.ents
         relation_extractor = nlp.get_pipe("relation_extractor")
         get_instances = relation_extractor.model.attrs["get_instances"]
         for (e1, e2) in get_instances(pred):

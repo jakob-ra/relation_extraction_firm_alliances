@@ -1,4 +1,4 @@
-# import pandas as pd
+import pandas as pd
 from spacy.cli.project.assets import project_assets
 from pathlib import Path
 from spacy.cli.project.run import project_run
@@ -26,11 +26,19 @@ print(nlp.component_names)
 text = ['Microsoft Inc and Sun Microsystems just announced a new strategic alliance to jointly research'
       'cloud computing infrastructure. Barack Obama mentioned something else.']
 
-for doc in nlp.pipe(text):
+for doc in nlp.pipe(test.document.values):
     print(f"spans: {[(e.start, e.text, e.label_) for e in doc.ents]}")
     for entry in doc._.rel.values():
         print([x for x in entry.items() if x[1] >= 0.9])
         [x for x in entry.items()]
+
+
+
+kb = pd.io.json.read_json(path_or_buf='/Users/Jakob/Documents/Thomson_SDC/Full/SDC_training_dict_balanced_negative.json',
+                          orient='records', lines=True)
+test = kb[kb.meta.apply(lambda x: x['split'] == 'test')]
+
+
 
 # text = ['Microsoft Inc and Sun Microsystems just announced that they will break up.']
 #
