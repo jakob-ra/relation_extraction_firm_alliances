@@ -35,11 +35,18 @@ for doc in nlp.pipe(test.document.values):
 
 
 
-kb = pd.io.json.read_json(path_or_buf='/Users/Jakob/Documents/Thomson_SDC/Full/SDC_training_dict_balanced_negative.json',
+kb = pd.io.json.read_json(path_or_buf='https://drive.google.com/uc?id=1yp5VQwbvv9xVZ__l5PsHo1TbNqI8P6I3&export=download',
                           orient='records', lines=True)
 test = kb[kb.meta.apply(lambda x: x['split'] == 'test')]
 
-res = nlp.pipe(texts)
+test = test.sample(100)
+
+import time
+
+start = time.time()
+test['pred_relationships'] = test.document.apply(lambda x: nlp(x)._.rel)
+end = time.time()
+print(f'Elapsed time: {end-start} seconds.')
 
 # text = ['Microsoft Inc and Sun Microsystems just announced that they will break up.']
 #
