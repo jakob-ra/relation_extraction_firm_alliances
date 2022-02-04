@@ -31,22 +31,22 @@ def main(trained_pipeline: Path, test_data: Path, print_details: bool):
     doc_bin = DocBin(store_user_data=True).from_disk(test_data)
     docs = doc_bin.get_docs(nlp.vocab)
 
-    for doc in docs:
-        print(doc.text)
-    start = time.time()
-    preds = nlp.pipe([doc.text for doc in docs])
-    end = time.time()
-    print(f'Full pipeline on {len(list(docs))} documents: elapsed time {end - start} seconds')
-
-    test_pred = list(preds)[0]
-    print(test_pred)
-    print(test_pred.ents)
-    print(test_pred._.rel)
-
-    print('start appending')
-    examples = []
-    for gold, pred in zip([doc for doc in docs], list(preds)):
-        examples.append(Example(pred, gold))
+    # for doc in docs:
+    #     print(doc.text)
+    # start = time.time()
+    # preds = nlp.pipe([doc.text for doc in docs])
+    # end = time.time()
+    # print(f'Full pipeline on {len(list(docs))} documents: elapsed time {end - start} seconds')
+    #
+    # test_pred = list(preds)[0]
+    # print(test_pred)
+    # print(test_pred.ents)
+    # print(test_pred._.rel)
+    #
+    # print('start appending')
+    # examples = []
+    # for gold, pred in zip([doc for doc in docs], list(preds)):
+    #     examples.append(Example(pred, gold))
 
     start = time.time()
     examples = []
