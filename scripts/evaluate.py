@@ -6,6 +6,7 @@ from spacy.tokens import DocBin, Doc
 from spacy.training.example import Example
 import time
 from tqdm import tqdm
+import pandas
 
 # make the factory work
 from rel_pipe import make_relation_extractor, score_relations
@@ -29,13 +30,11 @@ def main(trained_pipeline: Path, test_data: Path, print_details: bool):
 
     doc_bin = DocBin(store_user_data=True).from_disk(test_data)
     docs = doc_bin.get_docs(nlp.vocab)
-    docs = list(docs)[:10]
-
 
     start = time.time()
     preds = nlp.pipe(docs)
     end = time.time()
-    print(f'Full pipeline: elapsed time {end - start}')
+    print(f'Full pipeline on {len(list(docs))} documents: elapsed time {end - start} seconds')
 
     test_pred = list(preds)[0]
     print(test_pred)

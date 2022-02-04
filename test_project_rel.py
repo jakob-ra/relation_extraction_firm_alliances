@@ -23,8 +23,9 @@ print(nlp.component_names)
 
 # nlp = spacy.load('training/model-best')
 
-text = ['Microsoft Inc and Sun Microsystems just announced a new strategic alliance to jointly research'
-      'cloud computing infrastructure. Barack Obama mentioned something else.']
+texts = [['Microsoft Inc and Sun Microsystems just announced a new strategic alliance to jointly research'
+      'cloud computing infrastructure. Barack Obama mentioned something else.', 'Clark Development announced '
+      'a new partnership with BlissCo.']]
 
 for doc in nlp.pipe(test.document.values):
     print(f"spans: {[(e.start, e.text, e.label_) for e in doc.ents]}")
@@ -38,6 +39,9 @@ kb = pd.io.json.read_json(path_or_buf='/Users/Jakob/Documents/Thomson_SDC/Full/S
                           orient='records', lines=True)
 test = kb[kb.meta.apply(lambda x: x['split'] == 'test')]
 
+res = nlp.pipe(texts)
+
+list(res)
 
 # text = ['Microsoft Inc and Sun Microsystems just announced that they will break up.']
 #

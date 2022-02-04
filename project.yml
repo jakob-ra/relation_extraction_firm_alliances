@@ -20,7 +20,7 @@ directories: ["scripts", "configs", "assets", "data", "training"]
 assets:
     - dest: ${vars.annotations}
       description: "Gold-standard REL annotations created with Prodigy"
-      url: 'https://drive.google.com/uc?id=1yp5VQwbvv9xVZ__l5PsHo1TbNqI8P6I3&export=download'
+      url: 'https://drive.google.com/uc?id=1JN50OL1XTksgrz-NNNBd3pwpL6pakGYR&export=download'
 
 
 
