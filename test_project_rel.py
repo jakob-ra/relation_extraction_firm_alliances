@@ -11,16 +11,17 @@ from scripts.rel_pipe import make_relation_extractor, score_relations
 from scripts.rel_model import create_relation_model, create_classification_layer, create_instances, create_tensors
 
 # We load the relation extraction (REL)
-# nlp = spacy.load('en_core_web_trf', exclude=['tagger', 'parser', 'attribute_ruler', 'lemmatizer'])
-# nlp.add_pipe('sentencizer', after='transformer')
-# nlp.add_pipe('organization_extractor', after='ner')
-#
-# nlp_rel = spacy.load('training/model-best', vocab=nlp.vocab)
-# nlp.add_pipe('transformer', name='rel_transformer', source=nlp_rel)
-# nlp.add_pipe('relation_extractor', source=nlp_rel)
-# nlp.component_names
+nlp_rel = spacy.load('training/model-best', vocab=nlp.vocab)
 
-nlp = spacy.load('training/model-best')
+nlp = spacy.load('en_core_web_trf', exclude=['tagger', 'parser', 'attribute_ruler', 'lemmatizer'], vocab=nlp_rel.vocab)
+nlp.add_pipe('sentencizer', after='transformer')
+nlp.add_pipe('organization_extractor', after='ner')
+
+nlp.add_pipe('transformer', name='rel_transformer', source=nlp_rel)
+nlp.add_pipe('relation_extractor', source=nlp_rel)
+print(nlp.component_names)
+
+# nlp = spacy.load('training/model-best')
 
 text = ['Microsoft Inc and Sun Microsystems just announced a new strategic alliance to jointly research'
       'cloud computing infrastructure. Barack Obama mentioned something else.']
