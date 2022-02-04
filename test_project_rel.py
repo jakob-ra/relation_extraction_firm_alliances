@@ -39,7 +39,6 @@ kb = pd.io.json.read_json(path_or_buf='/Users/Jakob/Documents/Thomson_SDC/Full/S
 test = kb[kb.meta.apply(lambda x: x['split'] == 'test')]
 
 
-
 # text = ['Microsoft Inc and Sun Microsystems just announced that they will break up.']
 #
 # kb = pd.io.json.read_json(path_or_buf='/Users/Jakob/Documents/Thomson_SDC/Full/SDC_training_dict.json',

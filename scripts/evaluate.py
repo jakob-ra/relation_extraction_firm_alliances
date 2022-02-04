@@ -5,6 +5,7 @@ import spacy
 from spacy.tokens import DocBin, Doc
 from spacy.training.example import Example
 from tqdm import tqdm
+import time
 
 # make the factory work
 from rel_pipe import make_relation_extractor, score_relations
@@ -13,6 +14,7 @@ from rel_pipe import make_relation_extractor, score_relations
 from rel_model import create_relation_model, create_classification_layer, create_instances, create_tensors
 
 def main(trained_pipeline: Path, test_data: Path, print_details: bool):
+    # load pipeline and combine with NER/organization extraction
     nlp_rel = spacy.load(trained_pipeline)
 
     nlp = spacy.load('en_core_web_trf', exclude=['tagger', 'parser', 'attribute_ruler', 'lemmatizer'],
@@ -23,6 +25,7 @@ def main(trained_pipeline: Path, test_data: Path, print_details: bool):
     nlp.add_pipe('transformer', name='rel_transformer', source=nlp_rel)
     nlp.add_pipe('relation_extractor', source=nlp_rel)
     print(nlp.component_names)
+    print()
 
     doc_bin = DocBin(store_user_data=True).from_disk(test_data)
     docs = doc_bin.get_docs(nlp.vocab)
@@ -35,7 +38,10 @@ def main(trained_pipeline: Path, test_data: Path, print_details: bool):
         )
         # pred.ents = gold.ents
         for name, proc in nlp.pipeline:
+            start = time.time()
             pred = proc(pred)
+            end = time.time()
+            print(f'Pipeline component: {name}, elapsed time {end - start})
         examples.append(Example(pred, gold))
 
         # Print the gold and prediction, if gold label is not 0
