@@ -108,7 +108,7 @@ def main(trained_pipeline: Path, test_data: Path, print_details: bool):
     # _score_and_format(random_examples, thresholds)
 
     print()
-    print("Results of the trained model:")
+    print(f"Results of the trained model on {len(list(examples))} examples:")
     _score_and_format(examples, thresholds)
 
 
