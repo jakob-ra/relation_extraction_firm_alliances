@@ -31,13 +31,17 @@ def main(trained_pipeline: Path, test_data: Path, print_details: bool):
     docs = doc_bin.get_docs(nlp.vocab)
     docs = list(docs)[:10]
 
-    
+
     start = time.time()
     preds = nlp.pipe(docs)
     end = time.time()
     print(f'Full pipeline: elapsed time {end - start}')
 
-    print(list(preds)[0])
+    test_pred = list(preds)[0]
+    print(test_pred)
+    print(test_pred.ents)
+    print(test_pred._.rel)
+
     print('start appending')
     examples = []
     for gold, pred in zip(docs, preds):
