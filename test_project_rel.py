@@ -11,7 +11,7 @@ from scripts.rel_pipe import make_relation_extractor, score_relations
 from scripts.rel_model import create_relation_model, create_classification_layer, create_instances, create_tensors
 
 # We load the relation extraction (REL)
-nlp_rel = spacy.load('training/model-best', vocab=nlp.vocab)
+nlp_rel = spacy.load('training/model-best')
 
 nlp = spacy.load('en_core_web_trf', exclude=['tagger', 'parser', 'attribute_ruler', 'lemmatizer'], vocab=nlp_rel.vocab)
 nlp.add_pipe('sentencizer', after='transformer')
