@@ -5,6 +5,7 @@ import spacy
 from spacy.tokens import DocBin, Doc
 from spacy.training.example import Example
 import time
+from tqdm import tqdm
 
 # make the factory work
 from rel_pipe import make_relation_extractor, score_relations
@@ -28,47 +29,48 @@ def main(trained_pipeline: Path, test_data: Path, print_details: bool):
 
     doc_bin = DocBin(store_user_data=True).from_disk(test_data)
     docs = doc_bin.get_docs(nlp.vocab)
-    docs = list(docs)[:10]
+    docs = list(docs)[:100]
 
-    start = time.time()
-    preds = nlp.pipe(docs)
-    end = time.time()
-    print(f'Full pipeline: elapsed time {end - start}')
+    # start = time.time()
+    # preds = nlp.pipe(docs)
+    # end = time.time()
+    # print(f'Full pipeline: elapsed time {end - start}')
 
-    examples = []
-    for gold, pred in zip(docs, preds):
-        examples.append(Example(pred, gold))
 
     examples = []
-    for gold in docs:
-        pred = Doc(
-            nlp.vocab,
-            words=[t.text for t in gold],
-            spaces=[t.whitespace_ for t in gold],
-        )
-        # pred.ents = gold.ents
-        for name, proc in nlp.pipeline:
-            start = time.time()
-            pred = proc(pred)
-            end = time.time()
-            print(f'Pipeline component: {name}, elapsed time {end - start}')
+    for gold, pred in zip(docs, tqdm(nlp.pipe(docs))):
         examples.append(Example(pred, gold))
 
-        # Print the gold and prediction, if gold label is not 0
-        if print_details:
-            print()
-            print(f"Text: {gold.text}")
-            print(f"spans: {[(e.start, e.text, e.label_) for e in pred.ents]}")
-            for value, rel_dict in pred._.rel.items():
-                try:
-                    gold_labels = [k for (k, v) in gold._.rel[value].items() if v == 1.0]
-                    if gold_labels:
-                        print(
-                            f" pair: {value} --> gold labels: {gold_labels} --> predicted values: {rel_dict}"
-                        )
-                except:
-                    continue
-            print()
+    # examples = []
+    # for gold in docs:
+    #     pred = Doc(
+    #         nlp.vocab,
+    #         words=[t.text for t in gold],
+    #         spaces=[t.whitespace_ for t in gold],
+    #     )
+    #     # pred.ents = gold.ents
+    #     for name, proc in nlp.pipeline:
+    #         start = time.time()
+    #         pred = proc(pred)
+    #         end = time.time()
+    #         print(f'Pipeline component: {name}, elapsed time {end - start}')
+    #     examples.append(Example(pred, gold))
+    #
+    #     # Print the gold and prediction, if gold label is not 0
+    #     if print_details:
+    #         print()
+    #         print(f"Text: {gold.text}")
+    #         print(f"spans: {[(e.start, e.text, e.label_) for e in pred.ents]}")
+    #         for value, rel_dict in pred._.rel.items():
+    #             try:
+    #                 gold_labels = [k for (k, v) in gold._.rel[value].items() if v == 1.0]
+    #                 if gold_labels:
+    #                     print(
+    #                         f" pair: {value} --> gold labels: {gold_labels} --> predicted values: {rel_dict}"
+    #                     )
+    #             except:
+    #                 continue
+    #         print()
 
 
     # random baseline
