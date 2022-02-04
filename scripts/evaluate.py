@@ -32,7 +32,7 @@ def main(trained_pipeline: Path, test_data: Path, print_details: bool):
     docs = doc_bin.get_docs(nlp.vocab)
 
     start = time.time()
-    preds = nlp.pipe(docs)
+    preds = nlp.pipe([doc.text for doc in docs])
     end = time.time()
     print(f'Full pipeline on {len(list(docs))} documents: elapsed time {end - start} seconds')
 
