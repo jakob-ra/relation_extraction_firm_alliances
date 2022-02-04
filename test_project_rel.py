@@ -1,4 +1,4 @@
-import pandas as pd
+# import pandas as pd
 from spacy.cli.project.assets import project_assets
 from pathlib import Path
 from spacy.cli.project.run import project_run
