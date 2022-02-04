@@ -23,9 +23,9 @@ print(nlp.component_names)
 
 # nlp = spacy.load('training/model-best')
 
-texts = [['Microsoft Inc and Sun Microsystems just announced a new strategic alliance to jointly research'
+texts = ['Microsoft Inc and Sun Microsystems just announced a new strategic alliance to jointly research'
       'cloud computing infrastructure. Barack Obama mentioned something else.', 'Clark Development announced '
-      'a new partnership with BlissCo.']]
+      'a new partnership with BlissCo.']
 
 for doc in nlp.pipe(texts):
     print(f"spans: {[(e.start, e.text, e.label_) for e in doc.ents]}")
