@@ -216,7 +216,7 @@ class RelationExtractor(TrainablePipe):
 def score_relations(examples: Iterable[Example], threshold: float) -> Dict[str, Any]:
     """Score a batch of examples."""
     micro_prf = PRFScore()
-    print(f'Number of examples: {len(list(examples))}')
+    # print(f'Number of examples: {len(list(examples))}')
     # get labels from first example
     for example in examples:
         labels = list(list(example.reference._.rel.values())[0].keys())
