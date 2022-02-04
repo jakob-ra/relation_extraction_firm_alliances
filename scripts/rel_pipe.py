@@ -219,6 +219,7 @@ def score_relations(examples: Iterable[Example], threshold: float) -> Dict[str, 
     # get labels from first example
     for example in examples:
         labels = list(list(example.reference._.rel.values())[0].keys())
+        print(labels)
         if labels != None
             break
     f_per_type = {label: PRFScore() for label in labels}
