@@ -31,14 +31,14 @@ def main(trained_pipeline: Path, test_data: Path, print_details: bool):
     docs = doc_bin.get_docs(nlp.vocab)
     docs = list(docs)[:100]
 
-    # start = time.time()
-    # preds = nlp.pipe(docs)
-    # end = time.time()
-    # print(f'Full pipeline: elapsed time {end - start}')
+    start = time.time()
+    preds = nlp.pipe(docs)
+    end = time.time()
+    print(f'Full pipeline: elapsed time {end - start}')
 
 
     examples = []
-    for gold, pred in zip(docs, tqdm(nlp.pipe(docs))):
+    for gold, pred in zip(docs, preds):
         examples.append(Example(pred, gold))
 
     # examples = []
