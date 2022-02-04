@@ -43,7 +43,7 @@ def main(trained_pipeline: Path, test_data: Path, print_details: bool):
 
     print('start appending')
     examples = []
-    for gold, pred in zip(docs, preds):
+    for gold, pred in zip(list(docs), list(preds)):
         examples.append(Example(pred, gold))
 
     # examples = []
