@@ -48,7 +48,7 @@ test['pred_relationships'] = test.document.apply(lambda x: nlp(x)._.rel)
 end = time.time()
 print(f'Elapsed time: {end-start} seconds.')
 
-print(test.pred_relationships.values)
+# print(test.pred_relationships.values)
 # text = ['Microsoft Inc and Sun Microsystems just announced that they will break up.']
 #
 # kb = pd.io.json.read_json(path_or_buf='/Users/Jakob/Documents/Thomson_SDC/Full/SDC_training_dict.json',
