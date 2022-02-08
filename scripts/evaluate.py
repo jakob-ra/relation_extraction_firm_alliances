@@ -79,8 +79,6 @@ def main(trained_pipeline: Path, test_data: Path, print_details: bool):
                 except:
                     continue
             print()
-    end = time.time()
-    print(f'Full pipeline, one by one: elapsed time {end - start}')
 
     # random baseline
     # random_examples = []
@@ -110,6 +108,9 @@ def main(trained_pipeline: Path, test_data: Path, print_details: bool):
     print()
     print(f"Results of the trained model on {len(list(examples))} examples:")
     _score_and_format(examples, thresholds)
+
+    end = time.time()
+    print(f'Full pipeline, one by one: elapsed time {end - start}')
 
 
 def _score_and_format(examples, thresholds):
