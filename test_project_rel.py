@@ -48,6 +48,12 @@ test['pred_relationships'] = test.document.apply(lambda x: nlp(x)._.rel)
 end = time.time()
 print(f'Elapsed time: {end-start} seconds.')
 
+
+# read firm list
+path = 'C:/Users/Jakob/Documents/Orbis/Full/BvD_ID_and_Name.txt'
+orbis = pd.read_csv(path)
+
+
 # print(test.pred_relationships.values)
 # text = ['Microsoft Inc and Sun Microsystems just announced that they will break up.']
 #
