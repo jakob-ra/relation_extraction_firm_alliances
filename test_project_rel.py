@@ -51,8 +51,20 @@ print(f'Elapsed time: {end-start} seconds.')
 
 # read firm list
 path = 'C:/Users/Jakob/Documents/Orbis/Full/BvD_ID_and_Name.txt'
-orbis = pd.read_csv(path)
+orbis = pd.read_csv(path, sep='\t')
 
+firm_names =
+
+# entity ruler
+import spacy
+
+nlp = spacy.blank('en')
+ruler = nlp.add_pipe('entity_ruler')
+patterns = [{"label": "ORG", "pattern": [{"LOWER": "apple inc"}, {"LOWER": "apple computers"}], "id": "Apple - bvdid"}]
+ruler.add_patterns(patterns)
+doc = nlp('Apple inc introduced a new processor.')
+ents = [(ent.text, ent.label_) for ent in doc.ents]
+ents
 
 # print(test.pred_relationships.values)
 # text = ['Microsoft Inc and Sun Microsystems just announced that they will break up.']
