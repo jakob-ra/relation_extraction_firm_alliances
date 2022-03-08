@@ -33,38 +33,38 @@ for doc in nlp.pipe(texts):
         print([x for x in entry.items() if x[1] >= 0.9])
         [x for x in entry.items()]
 
-
-
-kb = pd.io.json.read_json(path_or_buf='https://drive.google.com/uc?id=1yp5VQwbvv9xVZ__l5PsHo1TbNqI8P6I3&export=download',
-                          orient='records', lines=True)
-test = kb[kb.meta.apply(lambda x: x['split'] == 'test')]
-
-test = test.sample(100)
-
-import time
-
-start = time.time()
-test['pred_relationships'] = test.document.apply(lambda x: nlp(x)._.rel)
-end = time.time()
-print(f'Elapsed time: {end-start} seconds.')
-
-
-# read firm list
-path = 'C:/Users/Jakob/Documents/Orbis/Full/BvD_ID_and_Name.txt'
-orbis = pd.read_csv(path, sep='\t')
-
-firm_names =
-
-# entity ruler
-import spacy
-
-nlp = spacy.blank('en')
-ruler = nlp.add_pipe('entity_ruler')
-patterns = [{"label": "ORG", "pattern": [{"LOWER": "apple inc"}, {"LOWER": "apple computers"}], "id": "Apple - bvdid"}]
-ruler.add_patterns(patterns)
-doc = nlp('Apple inc introduced a new processor.')
-ents = [(ent.text, ent.label_) for ent in doc.ents]
-ents
+#
+#
+# kb = pd.io.json.read_json(path_or_buf='https://drive.google.com/uc?id=1yp5VQwbvv9xVZ__l5PsHo1TbNqI8P6I3&export=download',
+#                           orient='records', lines=True)
+# test = kb[kb.meta.apply(lambda x: x['split'] == 'test')]
+#
+# test = test.sample(100)
+#
+# import time
+#
+# start = time.time()
+# test['pred_relationships'] = test.document.apply(lambda x: nlp(x)._.rel)
+# end = time.time()
+# print(f'Elapsed time: {end-start} seconds.')
+#
+#
+# # read firm list
+# path = 'C:/Users/Jakob/Documents/Orbis/Full/BvD_ID_and_Name.txt'
+# orbis = pd.read_csv(path, sep='\t')
+#
+# firm_names =
+#
+# # entity ruler
+# import spacy
+#
+# nlp = spacy.blank('en')
+# ruler = nlp.add_pipe('entity_ruler')
+# patterns = [{"label": "ORG", "pattern": [{"LOWER": "apple inc"}, {"LOWER": "apple computers"}], "id": "Apple - bvdid"}]
+# ruler.add_patterns(patterns)
+# doc = nlp('Apple inc introduced a new processor.')
+# ents = [(ent.text, ent.label_) for ent in doc.ents]
+# ents
 
 # print(test.pred_relationships.values)
 # text = ['Microsoft Inc and Sun Microsystems just announced that they will break up.']
