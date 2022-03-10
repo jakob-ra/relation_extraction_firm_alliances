@@ -53,7 +53,7 @@ def extract_relations(texts, threshold=0.99):
 
     return results
 
-extract_relations(texts, threshold=0.9)
+extract_relations(texts)
 
 print('Downloading test file...')
 df = pd.read_pickle('https://www.dropbox.com/s/36a07va701ap6h0/lexisnexis_firm_alliances_2017_cleaned_min_2_companies.pkl?dl=1')
@@ -65,7 +65,7 @@ t0 = time.time()
 
 sample_size = 100
 test = df.sample(sample_size)
-results = extract_relations(test.text, threshold=0.99)
+results = extract_relations(test.text)
 results = pd.Series(results, name='results')
 test = test.merge(results, left_index=True, right_index=True)
 
