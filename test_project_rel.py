@@ -39,6 +39,8 @@ def extract_relations(texts, threshold=0.9):
         for ent_pair in doc._.rel:
             entry = doc._.rel[ent_pair]
             relations = set([rel_type for rel_type in entry if entry[rel_type] >= threshold])
+            if len(relations) == 0:
+                pass
             firms = [e.text for e in doc.ents if e.start in ent_pair]
             if frozenset(firms) in doc_res: # if already relations detected for a firm pair, add to them
                 existing_relations = doc_res[frozenset(firms)]
