@@ -61,7 +61,7 @@ import time
 
 t0 = time.time()
 
-sample_size = 1000
+sample_size = 10
 test = df.sample(sample_size)
 results = extract_relations(test.text, threshold=0.9)
 results = pd.Series(results)
