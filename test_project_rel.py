@@ -27,12 +27,7 @@ texts = ['Microsoft Inc and Sun Microsystems just announced a new strategic alli
       'cloud computing infrastructure.', 'Barack Obama mentioned something else.', 'Clark Development announced '
       'a new partnership with BlissCo.', 'BHP Hilton Group just closed a licensing deal with SF Airlines.']
 
-for doc in nlp.pipe(texts):
-    print(doc.text)
-    print(f"spans: {[(e.start, e.text, e.label_) for e in doc.ents]}")
-    for entry in doc._.rel.values():
-        print([x for x in entry.items() if x[1] >= 0.9])
-        [x for x in entry.items()]
+
 
 
 def extract_relations(texts, threshold=0.9):
