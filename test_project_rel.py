@@ -65,7 +65,7 @@ t0 = time.time()
 
 sample_size = 100
 test = df.sample(sample_size)
-results = extract_relations(test.text, threshold=0.9)
+results = extract_relations(test.text, threshold=0.99)
 results = pd.Series(results, name='results')
 test = test.merge(results, left_index=True, right_index=True)
 
