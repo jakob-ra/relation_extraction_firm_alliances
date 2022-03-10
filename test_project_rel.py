@@ -24,77 +24,57 @@ print(nlp.component_names)
 # nlp = spacy.load('training/model-best')
 
 texts = ['Microsoft Inc and Sun Microsystems just announced a new strategic alliance to jointly research'
-      'cloud computing infrastructure. Barack Obama mentioned something else.', 'Clark Development announced '
-      'a new partnership with BlissCo.']
+      'cloud computing infrastructure.', 'Barack Obama mentioned something else.', 'Clark Development announced '
+      'a new partnership with BlissCo.', 'BHP Hilton Group just closed a licensing deal with SF Airlines.']
 
 for doc in nlp.pipe(texts):
+    print(doc.text)
     print(f"spans: {[(e.start, e.text, e.label_) for e in doc.ents]}")
     for entry in doc._.rel.values():
         print([x for x in entry.items() if x[1] >= 0.9])
         [x for x in entry.items()]
 
-df = pd.read_pickle('C:/Users/Jakob/Documents/lexisnexis_firm_alliances_combined_new.pkl')
-
-# keep only year 2017
-df = df[df.publication_date.dt.year == 2017]
-
-# keep only english
-df = df[df.lang == 'en']
-
-# combine title and content
-df['text'] = df.title + '. ' + df.content
-
-
-from nltk.tokenize import sent_tokenize
-df['sentences'] = df.text.apply(sent_tokenize)
-df['num_sentences'] = df.sentences.apply(len)
-
-
-df.sentences.sample().values
-df.num_sentences.describe()
-
-# cut off docs at maximum length
-max_len = 20
-df['sentences'] = df.sentences.apply(lambda x: x[:max_len])
-df['text'] = df.sentences.apply(lambda x: ' '.join(x))
-df.drop(columns=['sentences'], inplace=True)
-
-# focus on news mentioning at least 2 companies
-df = df[df.company.str.len() > 1]
-
 
 def extract_relations(texts, threshold=0.9):
     results = []
     for doc in nlp.pipe(texts):
+        print(doc.text)
         doc_res = {}
+        res = {}
         for ent_pair in doc._.rel:
             entry = doc._.rel[ent_pair]
-            relations = [x for x in entry if entry[x] >= threshold]
+            relations = set([rel_type for rel_type in entry if entry[rel_type] >= threshold])
             firms = [e.text for e in doc.ents if e.start in ent_pair]
-            res = {frozenset(firms): set(relations)}
-        doc_res.update(res) # issue: if a->b is detected as SA but not b->a then this will overwrite and save as no relation
+            if frozenset(firms) in doc_res: # if already relations detected for a firm pair, add to them
+                existing_relations = doc_res[frozenset(firms)]
+                doc_res[frozenset(firms)] = existing_relations | relations
+            else:
+                doc_res[frozenset(firms)] = relations
+        print(doc_res)
         results.append(doc_res)
+
 
     return results
 
+extract_relations(texts, threshold=0.9)
 
-test = df.sample(1000)
-results = extract_relations(test.text, threshold=0.6)
+df = pd.read_pickle('https://www.dropbox.com/s/36a07va701ap6h0/lexisnexis_firm_alliances_2017_cleaned_min_2_companies.pkl?dl=1')
+
+import time
+
+t0 = time.time()
+
+sample_size = 1000
+test = df.sample(sample_size)
+results = extract_relations(test.text, threshold=0.9)
 results = pd.Series(results)
 test = test.merge(results, left_index=True, right_index=True)
 
+t1 = time.time()
+print(f'Time elapsed for processing {sample_size} documents: {t1-t0}')
 
 
 
-
-
-# focus on news about JVs, alliances, and agreements
-# df.subject.explode().value_counts().head(50)
-# df[df.subject.apply(lambda x: [sub for sub in x if sub in ['JOINT VENTURES', 'ALLIANCES & PARTNERSHIPS', 'AGREEMENTS']]).str.len() > 0]
-
-
-
-#
 # kb = pd.io.json.read_json(path_or_buf='https://drive.google.com/uc?id=1yp5VQwbvv9xVZ__l5PsHo1TbNqI8P6I3&export=download',
 #                           orient='records', lines=True)
 # test = kb[kb.meta.apply(lambda x: x['split'] == 'test')]
