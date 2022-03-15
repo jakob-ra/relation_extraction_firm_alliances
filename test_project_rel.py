@@ -30,9 +30,9 @@ texts = ['Microsoft Inc and Sun Microsystems just announced a new strategic alli
 
 
 
-def extract_relations(texts, threshold=0.99):
+def extract_relations(texts, threshold=0.99, batch_size=1000):
     results = []
-    for doc in nlp.pipe(texts):
+    for doc in nlp.pipe(texts, batch_size=batch_size):
         print(doc.text)
         doc_res = {}
         res = {}
