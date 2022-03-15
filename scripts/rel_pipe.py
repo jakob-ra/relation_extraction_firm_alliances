@@ -13,16 +13,73 @@ from spacy.vocab import Vocab
 from spacy import Language
 from thinc.model import set_dropout_rate
 from wasabi import Printer
-
+import re
 
 Doc.set_extension("rel", default={}, force=True)
 msg = Printer()
+
+
+def firm_name_clean(firm_name, lower=True, remove_punc=True, remove_legal=True, remove_parentheses=True):
+    # make string
+    firm_name = str(firm_name)
+    firm_name = unidecode.unidecode(firm_name)
+    # lowercase
+    if lower:
+        firm_name = firm_name.lower()
+    # remove punctuation
+    if remove_punc:
+        firm_name = firm_name.translate(str.maketrans('', '', '!"#$%\\\'*+,./:;<=>?@^_`{|}~'))
+    # remove legal identifiers
+    if remove_legal:
+        legal_identifiers = ["co", "inc", "ag", "ltd", "lp", "llc", "pllc", "llp", "plc", "ltdplc", "corp",
+                             "corporation", "ab", "cos", "cia", "sa", "company", "companies", "consolidated",
+                             "stores", "limited", "srl", "kk", "gmbh", "pty", "group", "yk", "bhd",
+                             "limitada", "holdings", "kg", "bv", "pte", "sas", "ilp", "nl", "genossenschaft",
+                             "gesellschaft", "aktiengesellschaft", "ltda", "nv", "oao", "holding", "se",
+                             "oy", "plcnv", "the", "neft", "& co", "&co"]
+        pattern = '|'.join(legal_identifiers)
+        pattern = '\\b(' + pattern + ')\\b'  # match only word boundaries
+        firm_name = re.sub(pattern, '', firm_name)
+    # remove parentheses and anything in them: Bayerische Motoren Werke (BMW) -> Bayerische Motoren Werke
+    if remove_parentheses:
+        firm_name = re.sub(r'\([^()]*\)', '', firm_name)
+
+    # make hyphens consistent
+    firm_name = firm_name.replace(' - ', '-')
+
+    # remove ampersand symbol
+    firm_name = firm_name.replace('&amp;', '&')
+    firm_name = firm_name.replace('&amp', '&')
+
+    # strip
+    firm_name = firm_name.strip()
+
+    return firm_name
 
 @Language.component("organization_extractor")
 def organization_extractor(doc):
     doc.ents = tuple([e for e in doc.ents if e.label_ == 'ORG'])
 
     return doc
+
+@Language.component("firm_name_lookup") # only keeps a recognized entity if it is in the firm name lookup table
+def organization_extractor(doc, firm_lookup_list):
+    doc.ents = tuple([e for e in doc.ents if firm_name_clean(e.text) in firm_lookup_list])
+
+    return doc
+
+
+nlp = spacy.load("en_core_web_sm")
+text = ("When Sebastian Thrun started working on self-driving cars at "
+        "Google in 2007, few people outside of the company took him "
+        "seriously. “I can tell you very senior CEOs of major American "
+        "car companies would shake my hand and turn away because I wasn’t "
+        "worth talking to,” said Thrun, in an interview with Recode earlier "
+        "this week.")
+doc = nlp(text)
+for entity in doc.ents:
+    print(entity.text, entity.label_)
+
 
 @Language.factory(
     "relation_extractor",
