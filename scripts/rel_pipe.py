@@ -62,24 +62,17 @@ def organization_extractor(doc):
 
     return doc
 
+import pandas as pd
+print('Downloading firm lookup list...')
+firm_lookup_list = pd.read_csv('https://www.dropbox.com/s/bsq4m09j3ovqsy1/firm_lookup_list.csv.gzip?dl=1', compression='gzip')
+firm_lookup_list = set(firm_lookup_list.company.to_list())
+print('Done!')
+
 @Language.component("firm_name_lookup") # only keeps a recognized entity if it is in the firm name lookup table
-def organization_extractor(doc, firm_lookup_list):
+def organization_extractor(doc):
     doc.ents = tuple([e for e in doc.ents if firm_name_clean(e.text) in firm_lookup_list])
 
     return doc
-
-
-nlp = spacy.load("en_core_web_sm")
-text = ("When Sebastian Thrun started working on self-driving cars at "
-        "Google in 2007, few people outside of the company took him "
-        "seriously. “I can tell you very senior CEOs of major American "
-        "car companies would shake my hand and turn away because I wasn’t "
-        "worth talking to,” said Thrun, in an interview with Recode earlier "
-        "this week.")
-doc = nlp(text)
-for entity in doc.ents:
-    print(entity.text, entity.label_)
-
 
 @Language.factory(
     "relation_extractor",

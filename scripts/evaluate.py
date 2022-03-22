@@ -22,7 +22,7 @@ def main(trained_pipeline: Path, test_data: Path, print_details: bool):
                      vocab=nlp_rel.vocab)
     nlp.add_pipe('sentencizer', after='transformer')
     nlp.add_pipe('organization_extractor', after='ner')
-
+    nlp.add_pipe('firm_name_lookup', after='organization_extractor')
     nlp.add_pipe('transformer', name='rel_transformer', source=nlp_rel)
     nlp.add_pipe('relation_extractor', source=nlp_rel)
     print(nlp.component_names)
