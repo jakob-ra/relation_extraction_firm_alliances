@@ -71,8 +71,9 @@ print('Done!')
 
 @Language.component("firm_name_lookup") # only keeps a recognized entity if it is in the firm name lookup table
 def organization_extractor(doc):
+    print(doc.ents)
     doc.ents = tuple([e for e in doc.ents if firm_name_clean(e.text) in firm_lookup_list])
-
+    print(doc.ents)
     return doc
 
 @Language.factory(
