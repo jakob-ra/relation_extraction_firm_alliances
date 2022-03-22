@@ -16,7 +16,7 @@ nlp_rel = spacy.load('training/model-best')
 nlp = spacy.load('en_core_web_trf', exclude=['tagger', 'parser', 'attribute_ruler', 'lemmatizer'], vocab=nlp_rel.vocab)
 nlp.add_pipe('sentencizer', after='transformer')
 nlp.add_pipe('organization_extractor', after='ner')
-
+nlp.add_pipe('firm_name_lookup')
 nlp.add_pipe('transformer', name='rel_transformer', source=nlp_rel)
 nlp.add_pipe('relation_extractor', source=nlp_rel)
 print(nlp.component_names)
