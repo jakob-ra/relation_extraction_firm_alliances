@@ -14,6 +14,7 @@ from spacy import Language
 from thinc.model import set_dropout_rate
 from wasabi import Printer
 import re
+import unidecode
 
 Doc.set_extension("rel", default={}, force=True)
 msg = Printer()
